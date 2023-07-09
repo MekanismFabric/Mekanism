@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mekanism-fabric:block_raw_osmium"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mekanism-fabric:raw_osmium"
+  }
+}

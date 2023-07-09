@@ -1,8 +1,5 @@
 package net.panda.mekanismfabric.registries;
 
-import net.minecraft.block.Blocks;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.panda.mekanismfabric.itemgroup.MekanismItemGroup;
 
@@ -11,9 +8,9 @@ import static net.panda.mekanismfabric.Mekanism.MODID;
 
 public class MekanismItemGroups {
 
-    public static final MekanismItemGroup MEKANISM_ITEMS = new MekanismItemGroup(new ItemStack(Items.ACACIA_BOAT),
+    public static final MekanismItemGroup MEKANISM_ITEMS = new MekanismItemGroup(() -> MekanismItems.YELLOW_CAKE_URANIUM,
             new Identifier(MODID, "mekanism_items"), String.format("itemgroup.%s.items", MODID));
-    public static final MekanismItemGroup MEKANISM_BLOCKS = new MekanismItemGroup(new ItemStack(Blocks.BAMBOO),
+    public static final MekanismItemGroup MEKANISM_BLOCKS = new MekanismItemGroup(() -> MekanismBlocks.OSMIUM_ORE.asItem(),
             new Identifier(MODID, "mekanism_blocks"), String.format("itemgroup.%s.blocks", MODID));
 
     public static void registerItemGroups() {

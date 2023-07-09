@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 0.45,
+  "group": "smelting/",
+  "ingredient": {
+    "item": "mekanism-fabric:dust_bronze"
+  },
+  "result": "mekanism-fabric:ingot_bronze"
+}
