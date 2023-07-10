@@ -12,8 +12,7 @@ import net.panda.mekanismfabric.resource.MiscResources;
 import net.panda.mekanismfabric.resource.PrimaryResources;
 import net.panda.mekanismfabric.resource.ResourceTypes;
 
-import static net.panda.mekanismfabric.Mekanism.LOGGER;
-import static net.panda.mekanismfabric.Mekanism.MODID;
+import static net.panda.mekanismfabric.Mekanism.*;
 import static net.panda.mekanismfabric.registries.MekanismItemGroups.MEKANISM_ITEMS;
 
 public class MekanismItems {
@@ -73,11 +72,11 @@ public class MekanismItems {
     }
 
     private static Item registerItem(String identifier) {
-        return registerItem(new Identifier(MODID, identifier), new Item(new FabricItemSettings()));
+        return registerItem(id(identifier), new Item(new FabricItemSettings()));
     }
 
     private static Item registerItem(String identifier, Rarity rarity) {
-        return registerItem(new Identifier(MODID, identifier), new Item(new FabricItemSettings().rarity(rarity)));
+        return registerItem(id(identifier), new Item(new FabricItemSettings().rarity(rarity)));
     }
 
     private static <T extends Item> T registerItem(Identifier identifier, T item) {

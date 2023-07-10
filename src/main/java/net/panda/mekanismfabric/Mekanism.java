@@ -1,6 +1,7 @@
 package net.panda.mekanismfabric;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.util.Identifier;
 import net.panda.mekanismfabric.registries.MekanismBlocks;
 import net.panda.mekanismfabric.registries.MekanismItemGroups;
 import net.panda.mekanismfabric.registries.MekanismItems;
@@ -11,6 +12,10 @@ import org.slf4j.LoggerFactory;
 public class Mekanism implements ModInitializer {
 	public static final String MODID = "mekanism-fabric";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
+
+	public static Identifier id(String path) {
+		return new Identifier(MODID, path);
+	}
 
 	@Override
 	public void onInitialize() {

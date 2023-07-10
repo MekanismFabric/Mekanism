@@ -1,1 +1,3 @@
-{"parent":"mekanism-fabric:block/deepslate_ore/tin"}
+{
+  "parent": "mekanism-fabric:block/deepslate_ore/tin"
+}

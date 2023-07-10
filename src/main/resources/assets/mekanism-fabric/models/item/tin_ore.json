@@ -1,1 +1,3 @@
-{"parent":"mekanism-fabric:block/ore/tin"}
+{
+  "parent": "mekanism-fabric:block/ore/tin"
+}

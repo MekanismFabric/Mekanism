@@ -1,1 +1,3 @@
-{"parent":"mekanism-fabric:block/deepslate_ore/uranium"}
+{
+  "parent": "mekanism-fabric:block/deepslate_ore/uranium"
+}

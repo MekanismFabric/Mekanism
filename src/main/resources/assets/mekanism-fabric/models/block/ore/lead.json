@@ -1,1 +1,6 @@
-{"parent":"minecraft:block/cube_all","textures":{"all":"mekanism-fabric:block/lead_ore"}}
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mekanism-fabric:block/lead_ore"
+  }
+}

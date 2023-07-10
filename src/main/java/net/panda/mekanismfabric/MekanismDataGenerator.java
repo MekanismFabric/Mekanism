@@ -84,7 +84,7 @@ public class MekanismDataGenerator implements DataGeneratorEntrypoint {
 			create3x3ShapedRecipe(exporter, input, output, RecipeCategory.MISC, NUGGET_TO_INGOT_PATH);
 		}
 
-		private void createShapelessResourceBlockToIngotRecipe(Consumer<RecipeJsonProvider> exporter, PrimaryResources resource) {
+		private void createShapelessBlockToIngotRecipeFromResource(Consumer<RecipeJsonProvider> exporter, PrimaryResources resource) {
 			ItemConvertible inputRaw = MekanismBlocks.PROCESSED_RESOURCE_BLOCKS.get(resource.getRawResourceBlockInfo());
 			ItemConvertible input = MekanismBlocks.PROCESSED_RESOURCE_BLOCKS.get(resource);
 			ItemConvertible outputRaw = MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.RAW, resource);
@@ -133,17 +133,8 @@ public class MekanismDataGenerator implements DataGeneratorEntrypoint {
 		}
 
 		private void createCookingRecipe(Consumer<RecipeJsonProvider> exporter, List<ItemConvertible> inputs, ItemConvertible output, String path) {
-			RecipeProvider.offerSmelting(exporter, inputs, RecipeCategory.MISC, output, 0.45F, 300, SMELTING_PATH);
-
-//			CookingRecipeJsonBuilder.createSmelting(ingredient, RecipeCategory.MISC, output, 0.45F, 300)
-//					.criterion(FabricRecipeProvider.hasItem(),
-//							FabricRecipeProvider.conditionsFromItem(input))
-//					.offerTo(exporter, SMELTING_PATH + path + extractIdentifier(output));
-//
-//			CookingRecipeJsonBuilder.createSmelting(ingredient, RecipeCategory.MISC, output, 0.45F, 300)
-//					.criterion(FabricRecipeProvider.hasItem(input),
-//							FabricRecipeProvider.conditionsFromItem(input))
-//					.offerTo(exporter, BLASTING_PATH + path + extractIdentifier(output));
+			RecipeProvider.offerSmelting(exporter, inputs, RecipeCategory.MISC, output, 0.45F, 300, SMELTING_PATH + path);
+			RecipeProvider.offerBlasting(exporter, inputs, RecipeCategory.MISC, output, 0.45F, 300, BLASTING_PATH + path);
 		}
 
 		private void createCookingRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible input, ItemConvertible output, String path) {
@@ -152,11 +143,17 @@ public class MekanismDataGenerator implements DataGeneratorEntrypoint {
 
 		@Override
 		public void generate(Consumer<RecipeJsonProvider> exporter) {
+			for (PrimaryResources resource : PrimaryResources.values()) {
+				if (!resource.isVanilla()) {
+					createShapelessBlockToIngotRecipeFromResource(exporter, resource);
+					createShapelessIngotToNuggetRecipeFromResource(exporter, resource);
+					createShapedIngotToBlockRecipeFromResource(exporter, resource);
+					createShapedNuggetToIngotRecipeFromResource(exporter, resource);
+					createCookingRecipe(exporter, MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.DUST, resource), MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, resource), DUST_TO_INGOT_PATH);
+				}
+			}
+
 			// Block to Ingot
-			createShapelessResourceBlockToIngotRecipe(exporter, PrimaryResources.OSMIUM);
-			createShapelessResourceBlockToIngotRecipe(exporter, PrimaryResources.TIN);
-			createShapelessResourceBlockToIngotRecipe(exporter, PrimaryResources.LEAD);
-			createShapelessResourceBlockToIngotRecipe(exporter, PrimaryResources.URANIUM);
 			createShapelessBlockToIngotRecipe(exporter, MekanismBlocks.BRONZE_BLOCK, MekanismItems.BRONZE_INGOT);
 			createShapelessBlockToIngotRecipe(exporter, MekanismBlocks.REFINED_OBSIDIAN_BLOCK, MekanismItems.REFINED_OBSIDIAN_INGOT);
 			createShapelessBlockToIngotRecipe(exporter, MekanismBlocks.REFINED_GLOWSTONE_BLOCK, MekanismItems.REFINED_GLOWSTONE_INGOT);
@@ -164,21 +161,13 @@ public class MekanismDataGenerator implements DataGeneratorEntrypoint {
 			createShapelessBlockToIngotRecipe(exporter, MekanismBlocks.CHARCOAL_BLOCK, Items.CHARCOAL);
 			createShapelessBlockToIngotRecipe(exporter, MekanismBlocks.FLUORITE_BLOCK, MekanismItems.FLUORITE_GEM);
 
-			// Ingot to Nugget
-			createShapelessIngotToNuggetRecipeFromResource(exporter, PrimaryResources.OSMIUM);
-			createShapelessIngotToNuggetRecipeFromResource(exporter, PrimaryResources.TIN);
-			createShapelessIngotToNuggetRecipeFromResource(exporter, PrimaryResources.LEAD);
-			createShapelessIngotToNuggetRecipeFromResource(exporter, PrimaryResources.URANIUM);
+			// Ingot to Nugget\
 			createShapelessIngotToNuggetRecipe(exporter, MekanismItems.BRONZE_INGOT, MekanismItems.BRONZE_NUGGET);
 			createShapelessIngotToNuggetRecipe(exporter, MekanismItems.REFINED_OBSIDIAN_INGOT, MekanismItems.REFINED_OBSIDIAN_NUGGET);
 			createShapelessIngotToNuggetRecipe(exporter, MekanismItems.REFINED_GLOWSTONE_INGOT, MekanismItems.REFINED_GLOWSTONE_NUGGET);
 			createShapelessIngotToNuggetRecipe(exporter, MekanismItems.STEEL_INGOT, MekanismItems.STEEL_NUGGET);
 
 			// Ingot to Block
-			createShapedIngotToBlockRecipeFromResource(exporter, PrimaryResources.OSMIUM);
-			createShapedIngotToBlockRecipeFromResource(exporter, PrimaryResources.TIN);
-			createShapedIngotToBlockRecipeFromResource(exporter, PrimaryResources.LEAD);
-			createShapedIngotToBlockRecipeFromResource(exporter, PrimaryResources.URANIUM);
 			createShapedIngotToBlockRecipe(exporter, MekanismItems.BRONZE_INGOT, MekanismBlocks.BRONZE_BLOCK);
 			createShapedIngotToBlockRecipe(exporter, MekanismItems.REFINED_OBSIDIAN_INGOT, MekanismBlocks.REFINED_OBSIDIAN_BLOCK);
 			createShapedIngotToBlockRecipe(exporter, MekanismItems.REFINED_GLOWSTONE_INGOT, MekanismBlocks.REFINED_GLOWSTONE_BLOCK);
@@ -187,10 +176,6 @@ public class MekanismDataGenerator implements DataGeneratorEntrypoint {
 			createShapedIngotToBlockRecipe(exporter, MekanismItems.FLUORITE_GEM, MekanismBlocks.FLUORITE_BLOCK);
 
 			// Nugget to Ingot
-			createShapedNuggetToIngotRecipeFromResource(exporter, PrimaryResources.OSMIUM);
-			createShapedNuggetToIngotRecipeFromResource(exporter, PrimaryResources.TIN);
-			createShapedNuggetToIngotRecipeFromResource(exporter, PrimaryResources.LEAD);
-			createShapedNuggetToIngotRecipeFromResource(exporter, PrimaryResources.URANIUM);
 			createShapedNuggetToIngotRecipe(exporter, MekanismItems.BRONZE_NUGGET, MekanismItems.BRONZE_INGOT);
 			createShapedNuggetToIngotRecipe(exporter, MekanismItems.REFINED_OBSIDIAN_NUGGET, MekanismItems.REFINED_OBSIDIAN_INGOT);
 			createShapedNuggetToIngotRecipe(exporter, MekanismItems.REFINED_GLOWSTONE_NUGGET, MekanismItems.REFINED_GLOWSTONE_INGOT);
@@ -203,10 +188,6 @@ public class MekanismDataGenerator implements DataGeneratorEntrypoint {
 			createCookingRecipe(exporter, MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.DUST, PrimaryResources.GOLD), Items.GOLD_INGOT, DUST_TO_INGOT_PATH);
 			createCookingRecipe(exporter, MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.DUST, PrimaryResources.IRON), Items.IRON_INGOT, DUST_TO_INGOT_PATH);
 			createCookingRecipe(exporter, MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.DUST, PrimaryResources.COPPER), Items.COPPER_INGOT, DUST_TO_INGOT_PATH);
-			createCookingRecipe(exporter, MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.DUST, PrimaryResources.TIN), MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.TIN), DUST_TO_INGOT_PATH);
-			createCookingRecipe(exporter, MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.DUST, PrimaryResources.URANIUM), MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.URANIUM), DUST_TO_INGOT_PATH);
-			createCookingRecipe(exporter, MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.DUST, PrimaryResources.OSMIUM), MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.OSMIUM), DUST_TO_INGOT_PATH);
-			createCookingRecipe(exporter, MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.DUST, PrimaryResources.LEAD), MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.LEAD), DUST_TO_INGOT_PATH);
 			createCookingRecipe(exporter, List.of(MekanismBlocks.OSMIUM_ORE, MekanismBlocks.DEEPSLATE_OSMIUM_ORE), MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.OSMIUM), ORE_TO_INGOT_PATH);
 			createCookingRecipe(exporter, List.of(MekanismBlocks.TIN_ORE, MekanismBlocks.DEEPSLATE_TIN_ORE), MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.TIN), ORE_TO_INGOT_PATH);
 			createCookingRecipe(exporter, List.of(MekanismBlocks.LEAD_ORE, MekanismBlocks.DEEPSLATE_LEAD_ORE), MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.LEAD), ORE_TO_INGOT_PATH);

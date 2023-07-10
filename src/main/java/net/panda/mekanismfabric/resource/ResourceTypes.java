@@ -13,7 +13,6 @@ public enum ResourceTypes {
 
     private String pathPrefix;
     private String pathSuffix;
-    private String path;
 
     ResourceTypes(String pathPrefix) {
         this(pathPrefix, pathPrefix + "s");
@@ -22,7 +21,6 @@ public enum ResourceTypes {
     ResourceTypes(String pathPrefix, String pathSuffix) {
         this.pathPrefix = pathPrefix;
         this.pathSuffix = pathSuffix;
-        this.path = pathPrefix + "/" + pathSuffix;
     }
 
     public String getPathPrefix() {
@@ -34,7 +32,7 @@ public enum ResourceTypes {
     }
 
     public String getPath() {
-        return path;
+        return pathPrefix + "/" + pathSuffix;
     }
 
     public boolean isVanilla() {

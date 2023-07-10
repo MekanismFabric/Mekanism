@@ -19,8 +19,7 @@ import net.panda.mekanismfabric.resource.PrimaryResources;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static net.panda.mekanismfabric.Mekanism.LOGGER;
-import static net.panda.mekanismfabric.Mekanism.MODID;
+import static net.panda.mekanismfabric.Mekanism.*;
 import static net.panda.mekanismfabric.registries.MekanismItemGroups.MEKANISM_BLOCKS;
 
 public class MekanismBlocks {
@@ -39,16 +38,16 @@ public class MekanismBlocks {
         }
     }
 
-    public static final Block OSMIUM_ORE = registerBlock(new Identifier(MODID, "osmium_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
-    public static final Block DEEPSLATE_OSMIUM_ORE = registerBlock(new Identifier(MODID, "deepslate_osmium_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
-    public static final Block TIN_ORE = registerBlock(new Identifier(MODID, "tin_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
-    public static final Block DEEPSLATE_TIN_ORE = registerBlock(new Identifier(MODID, "deepslate_tin_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
-    public static final Block LEAD_ORE = registerBlock(new Identifier(MODID, "lead_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
-    public static final Block DEEPSLATE_LEAD_ORE = registerBlock(new Identifier(MODID, "deepslate_lead_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
-    public static final Block URANIUM_ORE = registerBlock(new Identifier(MODID, "uranium_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
-    public static final Block DEEPSLATE_URANIUM_ORE = registerBlock(new Identifier(MODID, "deepslate_uranium_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
-    public static final Block FLUORITE_ORE = registerBlock(new Identifier(MODID, "fluorite_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
-    public static final Block DEEPSLATE_FLUORITE_ORE = registerBlock(new Identifier(MODID, "deepslate_fluorite_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    public static final Block OSMIUM_ORE = registerBlock(id("osmium_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    public static final Block DEEPSLATE_OSMIUM_ORE = registerBlock(id("deepslate_osmium_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    public static final Block TIN_ORE = registerBlock(id("tin_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    public static final Block DEEPSLATE_TIN_ORE = registerBlock(id("deepslate_tin_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    public static final Block LEAD_ORE = registerBlock(id("lead_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    public static final Block DEEPSLATE_LEAD_ORE = registerBlock(id("deepslate_lead_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    public static final Block URANIUM_ORE = registerBlock(id("uranium_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    public static final Block DEEPSLATE_URANIUM_ORE = registerBlock(id("deepslate_uranium_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    public static final Block FLUORITE_ORE = registerBlock(id("fluorite_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    public static final Block DEEPSLATE_FLUORITE_ORE = registerBlock(id("deepslate_fluorite_ore"), new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
 
     public static final Block BRONZE_BLOCK = registerResourceBlock(BlockResourceInfo.BRONZE);
     public static final Block REFINED_OBSIDIAN_BLOCK = registerResourceBlock(BlockResourceInfo.REFINED_OBSIDIAN);
@@ -63,11 +62,11 @@ public class MekanismBlocks {
     }
 
     private static Block registerResourceBlock(BlockResourceInfo resourceInfo) {
-        return registerBlock(new Identifier(MODID, "block_" + resourceInfo.getName()), new Block(resourceInfo.modifyProperties(FabricBlockSettings.create())));
+        return registerBlock(id("block_" + resourceInfo.getName()), new Block(resourceInfo.modifyProperties(FabricBlockSettings.create())));
     }
 
     private static Block registerBlock(String identifier, AbstractBlock.Settings settings) {
-        return registerBlock(new Identifier(MODID, identifier), new Block(settings));
+        return registerBlock(id(identifier), new Block(settings));
     }
 
     private static <T extends Block> T registerBlock(Identifier identifier, T block) {

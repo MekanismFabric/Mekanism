@@ -1,1 +1,3 @@
-{"parent":"mekanism-fabric:block/ore/osmium"}
+{
+  "parent": "mekanism-fabric:block/ore/osmium"
+}
