@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mekanism-fabric:block/storage/refined_glowstone"
+    }
+  }
+}
