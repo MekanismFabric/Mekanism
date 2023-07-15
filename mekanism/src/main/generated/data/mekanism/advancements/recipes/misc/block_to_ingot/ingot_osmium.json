@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block_osmium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mekanism:block_osmium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ingot_osmium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mekanism:ingot_osmium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:block_to_ingot/ingot_osmium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ingot_osmium",
+      "has_block_osmium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:block_to_ingot/ingot_osmium"
+    ]
+  },
+  "sends_telemetry_event": false
+}

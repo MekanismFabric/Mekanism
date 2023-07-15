@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "mekanism-fabric:block/block_refined_obsidian"
-  }
-}

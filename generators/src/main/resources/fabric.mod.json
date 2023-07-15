@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "mekanism-generators",
+  "version": "${version}",
+
+  "name": "Mekanism Generators",
+  "description": "ToDo...",
+  "authors": [
+    "TinyPanda",
+    "hero-ku"
+  ],
+  "contact": {
+    "homepage": "https://wiki.aidancbrady.com/wiki/Mekanism",
+    "sources": "https://github.com/MekanismFabric/Mekanism"
+  },
+
+  "license": "MIT",
+  "icon": "assets/mekanism-generators/Mekanism.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "mekanism.generators.MekanismGenerators"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*",
+    "mekanism": "1.0.0"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/hGMY3q8KHd"
+      },
+      "parent": {
+        "id": "mekanism"
+      }
+    }
+  }
+}

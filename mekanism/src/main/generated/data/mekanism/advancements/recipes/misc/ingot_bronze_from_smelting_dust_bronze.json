@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dust_bronze": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mekanism:dust_bronze"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ingot_bronze_from_smelting_dust_bronze"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_dust_bronze",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ingot_bronze_from_smelting_dust_bronze"
+    ]
+  },
+  "sends_telemetry_event": false
+}

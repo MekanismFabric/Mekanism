@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 0.45,
+  "group": "smelting/ore_to_ingot/",
+  "ingredient": {
+    "item": "mekanism:tin_ore"
+  },
+  "result": "mekanism:ingot_tin"
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "mekanism",
+  "version": "${version}",
+
+  "name": "Mekanism",
+  "description": "Mekanism port to Fabric - 1.20+",
+  "authors": [
+    "TinyPandas",
+    "hero-ku"
+  ],
+  "contact": {
+    "homepage": "https://wiki.aidancbrady.com/wiki/Mekanism",
+    "sources": "https://github.com/MekanismFabric/Mekanism"
+  },
+
+  "license": "MIT",
+  "icon": "assets/mekanism/Mekanism.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "mekanism.Mekanism"
+    ],
+    "fabric-datagen": [
+      "mekanism.MekanismDataGenerator"
+    ]
+  },
+
+  "mixins": [],
+
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*",
+    "mekanism-api": "1.0.0"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/hGMY3q8KHd"
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block_charcoal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mekanism:block_charcoal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_charcoal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:charcoal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:block_to_ingot/charcoal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_charcoal",
+      "has_block_charcoal",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:block_to_ingot/charcoal"
+    ]
+  },
+  "sends_telemetry_event": false
+}

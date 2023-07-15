@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "s": {
+      "item": "mekanism:salt"
+    }
+  },
+  "pattern": [
+    "ss ",
+    "ss "
+  ],
+  "result": {
+    "item": "mekanism:block_salt"
+  },
+  "show_notification": true
+}
