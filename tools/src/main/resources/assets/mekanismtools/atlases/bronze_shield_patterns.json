@@ -1,0 +1,13 @@
+{
+    "sources": [
+        {
+            "type": "single",
+            "resource": "mekanismtools:item/bronze/shield"
+        },
+        {
+            "type": "directory",
+            "source": "mekanismtools:item/bronze/shield",
+            "prefix": "mekanismtools:item/bronze/shield/"
+        }
+    ]
+}

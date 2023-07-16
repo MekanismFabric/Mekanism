@@ -24,6 +24,9 @@
     ],
     "client": [
       "mekanism.tools.MekanismToolsClient"
+    ],
+    "fabric-datagen": [
+      "mekanism.tools.MekanismToolsDataGenerator"
     ]
   },
 
