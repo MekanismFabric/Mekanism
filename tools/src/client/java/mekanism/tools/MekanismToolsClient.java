@@ -10,6 +10,7 @@ public class MekanismToolsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        registerShieldHandlers();
     }
 
     public static void registerShieldHandlers() {

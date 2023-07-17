@@ -30,7 +30,9 @@
     ]
   },
 
-  "mixins": [],
+  "mixins": [
+    "mekanismtools.accessors.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.14.21",

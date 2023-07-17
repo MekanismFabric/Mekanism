@@ -3,6 +3,7 @@ package mekanism.tools.item;
 import mekanism.tools.IHasGlowEffect;
 import mekanism.tools.IHasRepairType;
 import mekanism.tools.material.BaseMekanismMaterial;
+import mekanism.tools.registries.ToolsItems;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -14,6 +15,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+
+import static mekanism.tools.registries.ToolsItems.REFINED_GLOWSTONE_LIGHT_LEVEL;
 
 public class ItemMekanismShield extends ShieldItem implements IHasRepairType, IHasGlowEffect {
 
@@ -52,9 +55,9 @@ public class ItemMekanismShield extends ShieldItem implements IHasRepairType, IH
 
     @Override
     public int getCustomLightLevel(ItemStack itemStack, int defaultLightLevel) {
-//        if (itemStack.getItem() == ToolsItems.REFINED_GLOWSTONE_SHIELD) {
-//            return REFINED_GLOWSTONE_LIGHT_LEVEL;
-//        }
+        if (itemStack.getItem() == ToolsItems.REFINED_GLOWSTONE_SHIELD) {
+            return REFINED_GLOWSTONE_LIGHT_LEVEL;
+        }
 
         return defaultLightLevel;
     }

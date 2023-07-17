@@ -23,6 +23,8 @@ public class ToolsItems {
     public static final Map<Item, String> ALL_SHIELDS = new HashMap<>();
     public static final Map<Item, String> ALL_ITEMS = new HashMap<>();
 
+    public static final int REFINED_GLOWSTONE_LIGHT_LEVEL = 0xF000F0;
+
     public static final ItemMekanismPaxel WOOD_PAXEL = registerPaxel(MekanismToolsConfig.config.wood);
     public static final ItemMekanismPaxel STONE_PAXEL = registerPaxel(MekanismToolsConfig.config.stone);
     public static final ItemMekanismPaxel IRON_PAXEL = registerPaxel(MekanismToolsConfig.config.iron);
@@ -40,7 +42,7 @@ public class ToolsItems {
     public static final ItemMekanismArmor BRONZE_CHESTPLATE = registerArmor(MekanismToolsConfig.config.bronze, ArmorItem.Type.CHESTPLATE);
     public static final ItemMekanismArmor BRONZE_LEGGINGS = registerArmor(MekanismToolsConfig.config.bronze, ArmorItem.Type.LEGGINGS);
     public static final ItemMekanismArmor BRONZE_BOOTS = registerArmor(MekanismToolsConfig.config.bronze, ArmorItem.Type.BOOTS);
-//    public static final ItemMekanismShield BRONZE_SHIELD = registerShield(MekanismToolsConfig.config.bronze);
+    public static final ItemMekanismShield BRONZE_SHIELD = registerShield(MekanismToolsConfig.config.bronze);
 
     public static final ItemMekanismPickaxe LAPIS_LAZULI_PICKAXE = registerPickaxe(MekanismToolsConfig.config.lapisLazuli);
     public static final ItemMekanismAxe LAPIS_LAZULI_AXE = registerAxe(MekanismToolsConfig.config.lapisLazuli);
@@ -52,7 +54,7 @@ public class ToolsItems {
     public static final ItemMekanismArmor LAPIS_LAZULI_CHESTPLATE = registerArmor(MekanismToolsConfig.config.lapisLazuli, ArmorItem.Type.CHESTPLATE);
     public static final ItemMekanismArmor LAPIS_LAZULI_LEGGINGS = registerArmor(MekanismToolsConfig.config.lapisLazuli, ArmorItem.Type.LEGGINGS);
     public static final ItemMekanismArmor LAPIS_LAZULI_BOOTS = registerArmor(MekanismToolsConfig.config.lapisLazuli, ArmorItem.Type.BOOTS);
-//    public static final ItemMekanismShield LAPIS_LAZULI_SHIELD = registerShield(MekanismToolsConfig.config.lapisLazuli);
+    public static final ItemMekanismShield LAPIS_LAZULI_SHIELD = registerShield(MekanismToolsConfig.config.lapisLazuli);
 
     public static final ItemMekanismPickaxe OSMIUM_PICKAXE = registerPickaxe(MekanismToolsConfig.config.osmium);
     public static final ItemMekanismAxe OSMIUM_AXE = registerAxe(MekanismToolsConfig.config.osmium);
@@ -64,7 +66,7 @@ public class ToolsItems {
     public static final ItemMekanismArmor OSMIUM_CHESTPLATE = registerArmor(MekanismToolsConfig.config.osmium, ArmorItem.Type.CHESTPLATE);
     public static final ItemMekanismArmor OSMIUM_LEGGINGS = registerArmor(MekanismToolsConfig.config.osmium, ArmorItem.Type.LEGGINGS);
     public static final ItemMekanismArmor OSMIUM_BOOTS = registerArmor(MekanismToolsConfig.config.osmium, ArmorItem.Type.BOOTS);
-//    public static final ItemMekanismShield OSMIUM_SHIELD = registerShield(MekanismToolsConfig.config.osmium);
+    public static final ItemMekanismShield OSMIUM_SHIELD = registerShield(MekanismToolsConfig.config.osmium);
 
     public static final ItemMekanismPickaxe REFINED_GLOWSTONE_PICKAXE = registerPickaxe(MekanismToolsConfig.config.refinedGlowstone);
     public static final ItemMekanismAxe REFINED_GLOWSTONE_AXE = registerAxe(MekanismToolsConfig.config.refinedGlowstone);
@@ -76,7 +78,7 @@ public class ToolsItems {
     public static final ItemMekanismArmor REFINED_GLOWSTONE_CHESTPLATE = registerArmor(MekanismToolsConfig.config.refinedGlowstone, ArmorItem.Type.CHESTPLATE);
     public static final ItemMekanismArmor REFINED_GLOWSTONE_LEGGINGS = registerArmor(MekanismToolsConfig.config.refinedGlowstone, ArmorItem.Type.LEGGINGS);
     public static final ItemMekanismArmor REFINED_GLOWSTONE_BOOTS = registerArmor(MekanismToolsConfig.config.refinedGlowstone, ArmorItem.Type.BOOTS);
-//    public static final ItemMekanismShield REFINED_GLOWSTONE_SHIELD = registerShield(MekanismToolsConfig.config.refinedGlowstone);
+    public static final ItemMekanismShield REFINED_GLOWSTONE_SHIELD = registerShield(MekanismToolsConfig.config.refinedGlowstone);
 
     public static final ItemMekanismPickaxe REFINED_OBSIDIAN_PICKAXE = registerPickaxe(MekanismToolsConfig.config.refinedObsidian);
     public static final ItemMekanismAxe REFINED_OBSIDIAN_AXE = registerAxe(MekanismToolsConfig.config.refinedObsidian);
@@ -88,7 +90,7 @@ public class ToolsItems {
     public static final ItemMekanismArmor REFINED_OBSIDIAN_CHESTPLATE = registerArmor(MekanismToolsConfig.config.refinedObsidian, ArmorItem.Type.CHESTPLATE);
     public static final ItemMekanismArmor REFINED_OBSIDIAN_LEGGINGS = registerArmor(MekanismToolsConfig.config.refinedObsidian, ArmorItem.Type.LEGGINGS);
     public static final ItemMekanismArmor REFINED_OBSIDIAN_BOOTS = registerArmor(MekanismToolsConfig.config.refinedObsidian, ArmorItem.Type.BOOTS);
-//    public static final ItemMekanismShield REFINED_OBSIDIAN_SHIELD = registerShield(MekanismToolsConfig.config.refinedObsidian);
+    public static final ItemMekanismShield REFINED_OBSIDIAN_SHIELD = registerShield(MekanismToolsConfig.config.refinedObsidian);
 
     public static final ItemMekanismPickaxe STEEL_PICKAXE = registerPickaxe(MekanismToolsConfig.config.steel);
     public static final ItemMekanismAxe STEEL_AXE = registerAxe(MekanismToolsConfig.config.steel);
@@ -100,7 +102,7 @@ public class ToolsItems {
     public static final ItemMekanismArmor STEEL_CHESTPLATE = registerArmor(MekanismToolsConfig.config.steel, ArmorItem.Type.CHESTPLATE);
     public static final ItemMekanismArmor STEEL_LEGGINGS = registerArmor(MekanismToolsConfig.config.steel, ArmorItem.Type.LEGGINGS);
     public static final ItemMekanismArmor STEEL_BOOTS = registerArmor(MekanismToolsConfig.config.steel, ArmorItem.Type.BOOTS);
-//    public static final ItemMekanismShield STEEL_SHIELD = registerShield(MekanismToolsConfig.config.steel);
+    public static final ItemMekanismShield STEEL_SHIELD = registerShield(MekanismToolsConfig.config.steel);
 
     public static void registerTools() {}
 
