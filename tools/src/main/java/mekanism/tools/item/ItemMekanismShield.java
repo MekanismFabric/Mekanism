@@ -1,6 +1,5 @@
 package mekanism.tools.item;
 
-import mekanism.tools.IHasGlowEffect;
 import mekanism.tools.IHasRepairType;
 import mekanism.tools.material.BaseMekanismMaterial;
 import mekanism.tools.registries.ToolsItems;

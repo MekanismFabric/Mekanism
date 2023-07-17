@@ -31,7 +31,8 @@
   },
 
   "mixins": [
-    "mekanismtools.accessors.json"
+    "mekanismtools.accessors.json",
+    "mekanismtools.mixins.json"
   ],
 
   "depends": {

@@ -1,4 +1,4 @@
-package mekanism.tools;
+package mekanism.tools.item;
 
 import net.minecraft.item.ItemStack;
 

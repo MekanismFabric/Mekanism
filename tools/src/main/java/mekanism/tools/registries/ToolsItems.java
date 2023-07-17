@@ -74,10 +74,10 @@ public class ToolsItems {
     public static final ItemMekanismHoe REFINED_GLOWSTONE_HOE = registerHoe(MekanismToolsConfig.config.refinedGlowstone);
     public static final ItemMekanismSword REFINED_GLOWSTONE_SWORD = registerSword(MekanismToolsConfig.config.refinedGlowstone);
     public static final ItemMekanismPaxel REFINED_GLOWSTONE_PAXEL = registerPaxel(MekanismToolsConfig.config.refinedGlowstone);
-    public static final ItemMekanismArmor REFINED_GLOWSTONE_HELMET = registerArmor(MekanismToolsConfig.config.refinedGlowstone, ArmorItem.Type.HELMET);
-    public static final ItemMekanismArmor REFINED_GLOWSTONE_CHESTPLATE = registerArmor(MekanismToolsConfig.config.refinedGlowstone, ArmorItem.Type.CHESTPLATE);
-    public static final ItemMekanismArmor REFINED_GLOWSTONE_LEGGINGS = registerArmor(MekanismToolsConfig.config.refinedGlowstone, ArmorItem.Type.LEGGINGS);
-    public static final ItemMekanismArmor REFINED_GLOWSTONE_BOOTS = registerArmor(MekanismToolsConfig.config.refinedGlowstone, ArmorItem.Type.BOOTS);
+    public static final ItemMekanismArmor REFINED_GLOWSTONE_HELMET = registerArmor(MekanismToolsConfig.config.refinedGlowstone, ArmorItem.Type.HELMET, true);
+    public static final ItemMekanismArmor REFINED_GLOWSTONE_CHESTPLATE = registerArmor(MekanismToolsConfig.config.refinedGlowstone, ArmorItem.Type.CHESTPLATE, true);
+    public static final ItemMekanismArmor REFINED_GLOWSTONE_LEGGINGS = registerArmor(MekanismToolsConfig.config.refinedGlowstone, ArmorItem.Type.LEGGINGS, true);
+    public static final ItemMekanismArmor REFINED_GLOWSTONE_BOOTS = registerArmor(MekanismToolsConfig.config.refinedGlowstone, ArmorItem.Type.BOOTS, true);
     public static final ItemMekanismShield REFINED_GLOWSTONE_SHIELD = registerShield(MekanismToolsConfig.config.refinedGlowstone);
 
     public static final ItemMekanismPickaxe REFINED_OBSIDIAN_PICKAXE = registerPickaxe(MekanismToolsConfig.config.refinedObsidian);
@@ -138,7 +138,11 @@ public class ToolsItems {
     }
 
     private static ItemMekanismArmor registerArmor(MaterialCreator material, ArmorItem.Type armorType) {
-        return registerArmor(material, armorType, ItemMekanismArmor::new);
+        return registerArmor(material, armorType, ItemMekanismArmor::new, false);
+    }
+
+    private static ItemMekanismArmor registerArmor(MaterialCreator material, ArmorItem.Type armorType, boolean makesPiglinsNeutral) {
+        return registerArmor(material, armorType, ItemMekanismArmor::new, makesPiglinsNeutral);
     }
 
     private static ItemMekanismShield registerShield(MaterialCreator materialCreator) {
@@ -173,8 +177,8 @@ public class ToolsItems {
         return Registry.register(Registries.ITEM, id(itemKey), item);
     }
 
-    private static ItemMekanismArmor registerArmor(MaterialCreator material, ArmorItem.Type armorType, ArmorCreator armorCreator) {
-        ItemMekanismArmor armor = armorCreator.create(material, armorType, new FabricItemSettings());
+    private static ItemMekanismArmor registerArmor(MaterialCreator material, ArmorItem.Type armorType, ArmorCreator armorCreator, boolean makesPiglinsNeutral) {
+        ItemMekanismArmor armor = armorCreator.create(material, armorType, new FabricItemSettings(), makesPiglinsNeutral);
         String itemKey = material.getRegistryPrefix() + "_" + armorType.getName();
         MEKANISM_TOOLS.addItemToGroup(armor.getDefaultStack());
         ALL_ITEMS.put(armor, itemKey);
@@ -182,6 +186,6 @@ public class ToolsItems {
     }
 
     private interface ArmorCreator {
-        ItemMekanismArmor create(MaterialCreator material, ArmorItem.Type armorType, Item.Settings settings);
+        ItemMekanismArmor create(MaterialCreator material, ArmorItem.Type armorType, Item.Settings settings, boolean makesPiglinsNeutral);
     }
 }
