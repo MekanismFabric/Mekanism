@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "refined_obsidian/nugget_from_smelting",
+  "ingredient": {
+    "item": "mekanismtools:refined_obsidian_paxel"
+  },
+  "result": "mekanism:nugget_refined_obsidian"
+}

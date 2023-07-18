@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel/tools/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_steel"
+    },
+    "s": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "bb",
+    "bs",
+    " s"
+  ],
+  "result": {
+    "item": "mekanismtools:steel_axe"
+  },
+  "show_notification": true
+}

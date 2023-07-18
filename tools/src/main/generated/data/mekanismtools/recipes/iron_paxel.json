@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "vanilla/tools/",
+  "key": {
+    "a": {
+      "item": "minecraft:iron_axe"
+    },
+    "p": {
+      "item": "minecraft:iron_pickaxe"
+    },
+    "r": {
+      "item": "minecraft:stick"
+    },
+    "s": {
+      "item": "minecraft:iron_shovel"
+    }
+  },
+  "pattern": [
+    "aps",
+    " r ",
+    " r "
+  ],
+  "result": {
+    "item": "mekanismtools:iron_paxel"
+  },
+  "show_notification": true
+}

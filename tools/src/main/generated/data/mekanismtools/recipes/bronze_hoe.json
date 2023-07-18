@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "bronze/tools/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_bronze"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "bb",
+    " s",
+    " s"
+  ],
+  "result": {
+    "item": "mekanismtools:bronze_hoe"
+  },
+  "show_notification": true
+}

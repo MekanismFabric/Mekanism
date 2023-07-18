@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "lapis_lazuli/tools/",
+  "key": {
+    "b": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "bb",
+    "bs",
+    " s"
+  ],
+  "result": {
+    "item": "mekanismtools:lapis_lazuli_axe"
+  },
+  "show_notification": true
+}

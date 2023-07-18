@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "refined_glowstone/armor/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_refined_glowstone"
+    },
+    "s": {
+      "item": "minecraft:shield"
+    }
+  },
+  "pattern": [
+    "bsb",
+    "bbb",
+    " b "
+  ],
+  "result": {
+    "item": "mekanismtools:refined_glowstone_shield"
+  },
+  "show_notification": true
+}

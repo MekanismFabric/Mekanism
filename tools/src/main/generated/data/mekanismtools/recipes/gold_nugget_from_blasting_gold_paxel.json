@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "ResourceKey[minecraft:item / minecraft:gold_nugget]_from_blasting",
+  "ingredient": {
+    "item": "mekanismtools:gold_paxel"
+  },
+  "result": "minecraft:gold_nugget"
+}

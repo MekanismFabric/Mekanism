@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "bronze/armor/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_bronze"
+    },
+    "s": {
+      "item": "minecraft:shield"
+    }
+  },
+  "pattern": [
+    "bsb",
+    "bbb",
+    " b "
+  ],
+  "result": {
+    "item": "mekanismtools:bronze_shield"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "refined_obsidian/armor/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_refined_obsidian"
+    }
+  },
+  "pattern": [
+    "bbb",
+    "b b",
+    "b b"
+  ],
+  "result": {
+    "item": "mekanismtools:refined_obsidian_leggings"
+  },
+  "show_notification": true
+}

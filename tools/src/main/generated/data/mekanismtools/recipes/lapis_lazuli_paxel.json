@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "lapis_lazuli/tools/",
+  "key": {
+    "a": {
+      "item": "mekanismtools:lapis_lazuli_axe"
+    },
+    "p": {
+      "item": "mekanismtools:lapis_lazuli_pickaxe"
+    },
+    "r": {
+      "item": "minecraft:stick"
+    },
+    "s": {
+      "item": "mekanismtools:lapis_lazuli_shovel"
+    }
+  },
+  "pattern": [
+    "aps",
+    " r ",
+    " r "
+  ],
+  "result": {
+    "item": "mekanismtools:lapis_lazuli_paxel"
+  },
+  "show_notification": true
+}

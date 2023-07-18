@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-16T22:35:25.9736142	Mekanism: Tools/Model Definitions
+// 1.20.1	2023-07-17T23:48:05.4270652	Mekanism: Tools/Model Definitions
 aad6d7561428c4d4924d542f86c056a7ea5c3c6d assets\mekanismtools\models\item\steel_pickaxe.json
 537b5fa3db703a0169db21eaee2c75737e2f0b76 assets\mekanismtools\models\item\osmium_chestplate.json
 f410bd7ffa8e98f73e25c7d4a5853e4cb6f47d4b assets\mekanismtools\models\item\osmium_helmet.json
@@ -28,8 +28,8 @@ c4c310606bb9714590f8a32d94cdf9027bee135b assets\mekanismtools\models\item\refine
 9772090fe9afe82edb8f1a635aec9732a8eaf35f assets\mekanismtools\models\item\refined_glowstone_hoe.json
 2aad7200c052d74daef8e93bd3d82da5a85d267b assets\mekanismtools\models\item\refined_obsidian_axe.json
 5990645078208072d02fa879f562dcb0d240dbde assets\mekanismtools\models\item\steel_paxel.json
-7012e9bdd84208e904a50b21205d3fd586450b3e assets\mekanismtools\models\item\osmium_shovel.json
 85647fef6e86e163fea40504d0cdcfe17d4a2bfc assets\mekanismtools\models\item\osmium_paxel.json
+7012e9bdd84208e904a50b21205d3fd586450b3e assets\mekanismtools\models\item\osmium_shovel.json
 d8d8404553b8c24169f47ecebcfc00023b79b086 assets\mekanismtools\models\item\bronze_leggings.json
 cfdcdd94b5e929a62d0fc2b2fae0b23afdc4249a assets\mekanismtools\models\item\bronze_chestplate.json
 1cc836f7f753248aeb3116f88a92a13020491e1d assets\mekanismtools\models\item\steel_boots.json

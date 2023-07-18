@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel/tools/",
+  "key": {
+    "a": {
+      "item": "mekanismtools:steel_axe"
+    },
+    "p": {
+      "item": "mekanismtools:steel_pickaxe"
+    },
+    "r": {
+      "item": "minecraft:iron_ingot"
+    },
+    "s": {
+      "item": "mekanismtools:steel_shovel"
+    }
+  },
+  "pattern": [
+    "aps",
+    " r ",
+    " r "
+  ],
+  "result": {
+    "item": "mekanismtools:steel_paxel"
+  },
+  "show_notification": true
+}

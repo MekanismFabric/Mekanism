@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel/armor/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_steel"
+    },
+    "s": {
+      "item": "minecraft:shield"
+    }
+  },
+  "pattern": [
+    "bsb",
+    "bbb",
+    " b "
+  ],
+  "result": {
+    "item": "mekanismtools:steel_shield"
+  },
+  "show_notification": true
+}

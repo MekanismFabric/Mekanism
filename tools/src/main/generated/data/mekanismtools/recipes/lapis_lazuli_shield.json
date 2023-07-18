@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "lapis_lazuli/armor/",
+  "key": {
+    "b": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "s": {
+      "item": "minecraft:shield"
+    }
+  },
+  "pattern": [
+    "bsb",
+    "bbb",
+    " b "
+  ],
+  "result": {
+    "item": "mekanismtools:lapis_lazuli_shield"
+  },
+  "show_notification": true
+}
