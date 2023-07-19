@@ -2,21 +2,25 @@ package mekanism.registries;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
+import mekanism.resource.MiscResources;
+import mekanism.resource.PrimaryResources;
+import mekanism.resource.ResourceTypes;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import mekanism.resource.MiscResources;
-import mekanism.resource.PrimaryResources;
-import mekanism.resource.ResourceTypes;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static mekanism.Mekanism.*;
-import static mekanism.registries.MekanismItemGroups.MEKANISM_ITEMS;
 
 public class MekanismItems {
 
+    public static final List<ItemStack> ALL_ITEMS = new ArrayList<>();
     public static final Table<ResourceTypes, PrimaryResources, Item> PROCESSED_RESOURCES = HashBasedTable.create();
 
     static {
@@ -80,7 +84,7 @@ public class MekanismItems {
     }
 
     private static <T extends Item> T registerItem(Identifier identifier, T item) {
-        MEKANISM_ITEMS.addItemToGroup(item.getDefaultStack());
+        ALL_ITEMS.add(item.getDefaultStack());
         return Registry.register(Registries.ITEM, identifier, item);
     }
 }

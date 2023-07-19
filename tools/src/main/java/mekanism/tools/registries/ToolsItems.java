@@ -7,21 +7,24 @@ import mekanism.tools.material.VanillaPaxelMaterialCreator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.function.BiFunction;
 
-import static mekanism.tools.MekanismTools.MEKANISM_TOOLS;
 import static mekanism.tools.MekanismTools.id;
 
 public class ToolsItems {
 
     public static final Map<Item, String> ALL_SHIELDS = new HashMap<>();
     public static final Map<Item, String> ALL_ITEMS = new HashMap<>();
+    public static final List<ItemStack> ALL_TOOLS = new ArrayList<>();
 
     public static final int REFINED_GLOWSTONE_LIGHT_LEVEL = 0xF000F0;
 
@@ -156,7 +159,7 @@ public class ToolsItems {
     private static <ITEM extends Item> ITEM register(BiFunction<MaterialCreator, Item.Settings, ITEM> itemCreator, String suffix, MaterialCreator material, FabricItemSettings settings) {
         ITEM item = itemCreator.apply(material, settings);
         String itemKey = material.getRegistryPrefix() + suffix;
-        MEKANISM_TOOLS.addItemToGroup(item.getDefaultStack());
+        ALL_TOOLS.add(item.getDefaultStack());
         if (item instanceof ItemMekanismShield) {
             ALL_SHIELDS.put(item, itemKey);
         } else {
@@ -172,7 +175,7 @@ public class ToolsItems {
     private static <ITEM extends Item> ITEM registerVanilla(BiFunction<VanillaPaxelMaterialCreator, Item.Settings, ITEM> itemCreator, String suffix, VanillaPaxelMaterialCreator material, FabricItemSettings settings) {
         ITEM item = itemCreator.apply(material, settings);
         String itemKey = material.getRegistryPrefix() + suffix;
-        MEKANISM_TOOLS.addItemToGroup(item.getDefaultStack());
+        ALL_TOOLS.add(item.getDefaultStack());
         ALL_ITEMS.put(item, itemKey);
         return Registry.register(Registries.ITEM, id(itemKey), item);
     }
@@ -180,7 +183,7 @@ public class ToolsItems {
     private static ItemMekanismArmor registerArmor(MaterialCreator material, ArmorItem.Type armorType, ArmorCreator armorCreator, boolean makesPiglinsNeutral) {
         ItemMekanismArmor armor = armorCreator.create(material, armorType, new FabricItemSettings(), makesPiglinsNeutral);
         String itemKey = material.getRegistryPrefix() + "_" + armorType.getName();
-        MEKANISM_TOOLS.addItemToGroup(armor.getDefaultStack());
+        ALL_TOOLS.add(armor.getDefaultStack());
         ALL_ITEMS.put(armor, itemKey);
         return Registry.register(Registries.ITEM, id(itemKey), armor);
     }

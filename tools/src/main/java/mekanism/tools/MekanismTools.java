@@ -17,7 +17,7 @@ public class MekanismTools implements ModInitializer {
     }
 
     public static final MekanismItemGroup MEKANISM_TOOLS = new MekanismItemGroup(() -> ToolsItems.DIAMOND_PAXEL,
-            id("mekanismtools"), String.format("itemgroup.%s.items", MODID));
+            id("mekanismtools"), String.format("itemgroup.%s.items", MODID), ToolsItems.ALL_TOOLS);
 
     @Override
     public void onInitialize() {
