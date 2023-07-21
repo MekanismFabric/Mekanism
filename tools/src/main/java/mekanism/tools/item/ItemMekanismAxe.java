@@ -1,7 +1,7 @@
 package mekanism.tools.item;
 
 import mekanism.tools.IHasRepairType;
-import mekanism.tools.material.MaterialCreator;
+import mekanism.tools.material.BaseMekanismMaterial;
 import mekanism.tools.util.ToolsUtils;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
@@ -18,9 +18,9 @@ import java.util.List;
 
 public class ItemMekanismAxe extends AxeItem implements IHasRepairType {
 
-    private final MaterialCreator material;
+    private final BaseMekanismMaterial material;
 
-    public ItemMekanismAxe(MaterialCreator material, Item.Settings settings) {
+    public ItemMekanismAxe(BaseMekanismMaterial material, Item.Settings settings) {
         super(material, material.getAxeDamage(), material.getAxeAtkSpeed(), settings);
         this.material = material;
     }

@@ -1,7 +1,7 @@
 package mekanism.tools.item;
 
 import mekanism.tools.IHasRepairType;
-import mekanism.tools.material.MaterialCreator;
+import mekanism.tools.material.BaseMekanismMaterial;
 import mekanism.tools.util.ToolsUtils;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
@@ -17,9 +17,9 @@ import java.util.List;
 
 public class ItemMekanismPickaxe extends PickaxeItem implements IHasRepairType {
 
-    private final MaterialCreator material;
+    private final BaseMekanismMaterial material;
 
-    public ItemMekanismPickaxe(MaterialCreator material, Settings settings) {
+    public ItemMekanismPickaxe(BaseMekanismMaterial material, Settings settings) {
         super(material, (int) material.getPickaxeDamage(), material.getPickaxeAtkSpeed(), settings);
         this.material = material;
     }

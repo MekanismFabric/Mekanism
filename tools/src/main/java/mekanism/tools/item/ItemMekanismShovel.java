@@ -1,7 +1,7 @@
 package mekanism.tools.item;
 
 import mekanism.tools.IHasRepairType;
-import mekanism.tools.material.MaterialCreator;
+import mekanism.tools.material.BaseMekanismMaterial;
 import mekanism.tools.util.ToolsUtils;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
@@ -17,9 +17,9 @@ import java.util.List;
 
 public class ItemMekanismShovel extends ShovelItem implements IHasRepairType {
 
-    private final MaterialCreator material;
+    private final BaseMekanismMaterial material;
 
-    public ItemMekanismShovel(MaterialCreator material, Settings settings) {
+    public ItemMekanismShovel(BaseMekanismMaterial material, Settings settings) {
         super(material, material.getShovelDamage(), material.getShovelAtkSpeed(), settings);
         this.material = material;
     }

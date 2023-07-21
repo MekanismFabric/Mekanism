@@ -5,6 +5,7 @@ import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import mekanism.itemgroup.MekanismItemGroup;
 import mekanism.tools.config.MekanismToolsConfig;
+import mekanism.tools.config.tools.Tools;
 import mekanism.tools.registries.ToolsItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -20,8 +21,7 @@ public class MekanismTools implements ModInitializer {
         return new Identifier(MODID, path);
     }
 
-    public static final MekanismItemGroup MEKANISM_TOOLS = new MekanismItemGroup(() -> ToolsItems.DIAMOND_PAXEL,
-            id("mekanismtools"), String.format("itemgroup.%s.items", MODID), ToolsItems.ALL_TOOLS);
+    public static MekanismItemGroup MEKANISM_TOOLS;
 
     @Override
     public void onInitialize() {
@@ -29,7 +29,14 @@ public class MekanismTools implements ModInitializer {
 
         AutoConfig.register(MekanismToolsConfig.class, PartitioningSerializer.wrap(Toml4jConfigSerializer::new));
 
+        MEKANISM_TOOLS = new MekanismItemGroup(() -> ToolsItems.DIAMOND_PAXEL,
+                id("mekanismtools"), String.format("itemgroup.%s.items", MODID), ToolsItems.ALL_TOOLS);
+
         ToolsItems.registerTools();
         MEKANISM_TOOLS.register();
+    }
+
+    public static Tools config() {
+        return AutoConfig.getConfigHolder(MekanismToolsConfig.class).getConfig().config.config;
     }
 }

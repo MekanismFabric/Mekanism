@@ -1,7 +1,7 @@
 package mekanism.tools.item;
 
 import mekanism.tools.IHasRepairType;
-import mekanism.tools.material.MaterialCreator;
+import mekanism.tools.material.BaseMekanismMaterial;
 import mekanism.tools.util.ToolsUtils;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.HoeItem;
@@ -16,9 +16,9 @@ import java.util.List;
 
 public class ItemMekanismHoe extends HoeItem implements IHasRepairType {
 
-    private final MaterialCreator material;
+    private final BaseMekanismMaterial material;
 
-    public ItemMekanismHoe(MaterialCreator material, Settings settings) {
+    public ItemMekanismHoe(BaseMekanismMaterial material, Settings settings) {
         super(material, (int) material.getHoeDamage(), material.getHoeAtkSpeed(), settings);
         this.material = material;
     }
