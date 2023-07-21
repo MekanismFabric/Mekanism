@@ -7,9 +7,11 @@ import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 @Config(name = "mekanismtools")
 public class MekanismToolsConfig extends PartitioningSerializer.GlobalData {
 
-//    @ConfigEntry.Gui.Excluded
-//    public static final ToolsConfig config = new ToolsConfig();
+    @ConfigEntry.Category("tools_common")
+    @ConfigEntry.Gui.TransitiveObject
+    public final ToolsConfig config = new ToolsConfig();
 
+    @ConfigEntry.Category("tools_client")
     @ConfigEntry.Gui.TransitiveObject
     public final ToolsClientConfig clientConfig = new ToolsClientConfig();
 }

@@ -63,6 +63,9 @@ allprojects {
 		mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 		modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
+		compileOnly 'org.projectlombok:lombok:1.18.28'
+		annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
 		// Fabric API. This is technically optional, but you probably want it anyway.
 		modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
@@ -72,6 +75,8 @@ allprojects {
 		modApi("com.terraformersmc:modmenu:${project.mod_menu_version}") {
 			exclude(group: "net.fabricmc.fabric-api")
 		}
+
+		implementation 'com.electronwill.night-config:toml:3.6.6'
 	}
 
 	configurations { dev }

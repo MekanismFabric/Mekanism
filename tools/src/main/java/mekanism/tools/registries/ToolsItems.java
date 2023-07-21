@@ -1,6 +1,6 @@
 package mekanism.tools.registries;
 
-import mekanism.tools.config.ToolsConfig;
+import mekanism.tools.config.ToolsConfigOld;
 import mekanism.tools.item.*;
 import mekanism.tools.material.MaterialCreator;
 import mekanism.tools.material.VanillaPaxelMaterialCreator;
@@ -28,7 +28,7 @@ public class ToolsItems {
 
     public static final int REFINED_GLOWSTONE_LIGHT_LEVEL = 0xF000F0;
 
-    private static final ToolsConfig config = new ToolsConfig();
+    private static final ToolsConfigOld config = new ToolsConfigOld();
 
     public static final ItemMekanismPaxel WOOD_PAXEL = registerPaxel(config.wood);
     public static final ItemMekanismPaxel STONE_PAXEL = registerPaxel(config.stone);

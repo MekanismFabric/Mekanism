@@ -16,6 +16,8 @@ import static mekanism.tools.MekanismTools.id;
 
 public class OsmiumMaterialDefaults extends BaseMekanismMaterial {
 
+    public static final String name = "osmium";
+
     @Override
     public int getShieldDurability() {
         return 672;
@@ -29,6 +31,11 @@ public class OsmiumMaterialDefaults extends BaseMekanismMaterial {
     @Override
     public float getAxeAtkSpeed() {
         return -3.3F;
+    }
+
+    @Override
+    public int getPaxelMiningLevel() {
+        return 3;
     }
 
     @Override

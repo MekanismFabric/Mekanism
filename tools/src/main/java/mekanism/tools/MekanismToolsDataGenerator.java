@@ -4,6 +4,7 @@ import mekanism.registries.MekanismItems;
 import mekanism.resource.PrimaryResources;
 import mekanism.resource.ResourceTypes;
 import mekanism.tools.datagen.BaseItemModelProvider;
+import mekanism.tools.datagen.ConfigLangHelper;
 import mekanism.tools.item.ItemMekanismPaxel;
 import mekanism.tools.item.ItemMekanismShield;
 import mekanism.tools.registries.ToolsItems;
@@ -106,6 +107,9 @@ public class MekanismToolsDataGenerator implements DataGeneratorEntrypoint {
 
                 translationBuilder.add(item, convertItemKeyToDisplay(itemKey));
             }
+
+            ConfigLangHelper.addCategoryNames(translationBuilder);
+            ConfigLangHelper.addMaterialNames(translationBuilder);
 
             translationBuilder.add("tooltip.mekanismtools.hp", "HP: %1$s");
         }

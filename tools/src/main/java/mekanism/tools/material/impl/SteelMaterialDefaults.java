@@ -16,6 +16,8 @@ import static mekanism.tools.MekanismTools.id;
 
 public class SteelMaterialDefaults extends BaseMekanismMaterial {
 
+    public static final String name = "steel";
+
     @Override
     public int getShieldDurability() {
         return 448;
@@ -29,6 +31,11 @@ public class SteelMaterialDefaults extends BaseMekanismMaterial {
     @Override
     public float getAxeAtkSpeed() {
         return -3.0F;
+    }
+
+    @Override
+    public int getPaxelMiningLevel() {
+        return 3;
     }
 
     @Override

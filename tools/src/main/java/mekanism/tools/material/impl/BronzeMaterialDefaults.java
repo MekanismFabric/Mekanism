@@ -15,6 +15,8 @@ import org.jetbrains.annotations.Nullable;
 import static mekanism.tools.MekanismTools.id;
 
 public class BronzeMaterialDefaults extends BaseMekanismMaterial {
+    public static final String name = "bronze";
+
     @Override
     public int getShieldDurability() {
         return 403;
@@ -28,6 +30,11 @@ public class BronzeMaterialDefaults extends BaseMekanismMaterial {
     @Override
     public float getAxeAtkSpeed() {
         return -3.0F;
+    }
+
+    @Override
+    public int getPaxelMiningLevel() {
+        return 3;
     }
 
     @Override

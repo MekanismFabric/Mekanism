@@ -16,6 +16,8 @@ import static mekanism.tools.MekanismTools.id;
 
 public class LapisLazuliMaterialDefaults extends BaseMekanismMaterial {
 
+    public static final String name = "lapis_lazuli";
+
     @Override
     public int getShieldDurability() {
         return 224;
@@ -29,6 +31,11 @@ public class LapisLazuliMaterialDefaults extends BaseMekanismMaterial {
     @Override
     public float getAxeAtkSpeed() {
         return -2.9F;
+    }
+
+    @Override
+    public int getPaxelMiningLevel() {
+        return 2;
     }
 
     @Override

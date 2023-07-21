@@ -16,6 +16,8 @@ import static mekanism.tools.MekanismTools.id;
 
 public class RefinedGlowstoneMaterialDefaults extends BaseMekanismMaterial {
 
+    public static final String name = "refined_glowstone";
+
     @Override
     public int getShieldDurability() {
         return 381;
@@ -29,6 +31,11 @@ public class RefinedGlowstoneMaterialDefaults extends BaseMekanismMaterial {
     @Override
     public float getAxeAtkSpeed() {
         return -2.9F;
+    }
+
+    @Override
+    public int getPaxelMiningLevel() {
+        return 3;
     }
 
     @Override

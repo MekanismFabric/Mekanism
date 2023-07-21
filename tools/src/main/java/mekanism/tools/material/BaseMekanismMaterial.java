@@ -71,6 +71,8 @@ public abstract class BaseMekanismMaterial extends IItemMaterialHelper implement
         return getCommonEnchantability();
     }
 
+    public abstract int getPaxelMiningLevel();
+
     public abstract String getRegistryPrefix();
 
     //Recombine the methods that are split in such a way as to make it so the compiler can reobfuscate them properly

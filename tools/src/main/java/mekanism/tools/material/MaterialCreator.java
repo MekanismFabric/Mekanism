@@ -25,6 +25,7 @@ public class MaterialCreator extends BaseMekanismMaterial {
     private final float paxelDamage;
     private final float paxelAtkSpeed;
     private final float paxelEfficiency;
+    private final int paxelMiningLevel;
     private final int paxelEnchantability;
     private final int paxelMaxUses;
     private final int toolMaxUses;
@@ -64,6 +65,7 @@ public class MaterialCreator extends BaseMekanismMaterial {
         paxelEfficiency = materialDefaults.getPaxelEfficiency();
         paxelEnchantability = materialDefaults.getPaxelEnchantability();
         paxelMaxUses = materialDefaults.getPaxelMaxUses();
+        paxelMiningLevel = materialDefaults.getPaxelMiningLevel();
         enchantability = materialDefaults.getEnchantability();
         toughness = materialDefaults.getToughness();
         knockbackResistance = materialDefaults.getKnockbackResistance();
@@ -150,6 +152,11 @@ public class MaterialCreator extends BaseMekanismMaterial {
     @Override
     public float getPaxelAtkSpeed() {
         return paxelAtkSpeed;
+    }
+
+    @Override
+    public int getPaxelMiningLevel() {
+        return paxelMiningLevel;
     }
 
     @Override

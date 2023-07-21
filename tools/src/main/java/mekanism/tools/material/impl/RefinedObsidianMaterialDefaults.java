@@ -16,6 +16,8 @@ import static mekanism.tools.MekanismTools.id;
 
 public class RefinedObsidianMaterialDefaults extends BaseMekanismMaterial {
 
+    public static final String name = "refined_obsidian";
+
     @Override
     public int getShieldDurability() {
         return 1_680;
@@ -29,6 +31,11 @@ public class RefinedObsidianMaterialDefaults extends BaseMekanismMaterial {
     @Override
     public float getAxeAtkSpeed() {
         return -2.9F;
+    }
+
+    @Override
+    public int getPaxelMiningLevel() {
+        return 3;
     }
 
     @Override
