@@ -1,11 +1,14 @@
 package mekanism.tools.config;
 
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
 import mekanism.tools.material.MaterialCreator;
 import mekanism.tools.material.VanillaPaxelMaterialCreator;
 import mekanism.tools.material.impl.*;
 import mekanism.tools.material.impl.vanilla.*;
 
-public class ToolsConfig {
+@Config(name = "common")
+public class ToolsConfig implements ConfigData {
 
     public final VanillaPaxelMaterialCreator wood;
     public final VanillaPaxelMaterialCreator stone;

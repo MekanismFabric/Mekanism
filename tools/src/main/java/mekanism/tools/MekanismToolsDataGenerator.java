@@ -106,6 +106,8 @@ public class MekanismToolsDataGenerator implements DataGeneratorEntrypoint {
 
                 translationBuilder.add(item, convertItemKeyToDisplay(itemKey));
             }
+
+            translationBuilder.add("tooltip.mekanismtools.hp", "HP: %1$s");
         }
 
         private String convertItemKeyToDisplay(String itemKey) {

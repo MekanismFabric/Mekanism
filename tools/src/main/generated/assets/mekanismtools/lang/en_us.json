@@ -71,5 +71,6 @@
   "item.mekanismtools.steel_sword": "Steel Sword",
   "item.mekanismtools.stone_paxel": "Stone Paxel",
   "item.mekanismtools.wood_paxel": "Wood Paxel",
-  "itemgroup.mekanismtools.items": "Mekanism Tools"
+  "itemgroup.mekanismtools.items": "Mekanism Tools",
+  "tooltip.mekanismtools.hp": "HP: %1$s"
 }

@@ -2,6 +2,7 @@ package mekanism.tools.item;
 
 import mekanism.tools.IHasRepairType;
 import mekanism.tools.material.MaterialCreator;
+import mekanism.tools.util.ToolsUtils;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.ItemStack;
@@ -25,6 +26,7 @@ public class ItemMekanismHoe extends HoeItem implements IHasRepairType {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
+        ToolsUtils.addDurability(tooltip, stack);
     }
 
     @Override
