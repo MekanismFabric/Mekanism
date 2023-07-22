@@ -9,7 +9,11 @@ import java.util.Map;
 
 public class ConfigLangHelper {
 
-    private static final String PREFIX = "text.autoconfig.mekanismtools.option.config.config.";
+    private static final String AUTO_CONFIG_PREFIX = "text.autoconfig.mekanismtools.";
+    private static final String CATEGORY_PREFIX = AUTO_CONFIG_PREFIX + "category.";
+    private static final String OPTION_PREFIX = AUTO_CONFIG_PREFIX + "option.";
+    private static final String CONFIG_PREFIX = OPTION_PREFIX + "config.";
+    private static final String TOOLS_CONFIG_PREFIX = CONFIG_PREFIX + "config";
     private static final List<String> MATERIAL_LIST = new ArrayList<>(){{
         add("bronze");
         add("lapisLazuli");
@@ -54,18 +58,39 @@ public class ConfigLangHelper {
         put("helmetArmor", "Helmet Protection");
     }};
 
+    private static final Map<String, String> ARMOR_CONFIG_FIELDS = new HashMap<>(){{
+       put("swordChance", "Sword Chance");
+       put("helmetChance", "Helmet Chance");
+       put("chestplateChance", "Chestplate Chance");
+       put("leggingsChance", "Legging Chance");
+       put("bootsChance", "Boot Chance");
+    }};
+
     public static void addCategoryNames(FabricLanguageProvider.TranslationBuilder translationBuilder) {
-        translationBuilder.add("text.autoconfig.mekanismtools.category.tools_common", "Mekanism Tools Common");
-        translationBuilder.add("text.autoconfig.mekanismtools.category.tools_client", "Mekanism Tools Client");
-        translationBuilder.add("text.autoconfig.mekanismtools.option.clientConfig.displayDurabilityTooltips", "Display Durability Tooltips");
+        translationBuilder.add(CATEGORY_PREFIX + "tools_common", "Mekanism Tools Common");
+        translationBuilder.add(CATEGORY_PREFIX + "tools_client", "Mekanism Tools Client");
+        translationBuilder.add(OPTION_PREFIX + "clientConfig.displayDurabilityTooltips", "Display Durability Tooltips");
     }
 
     public static void addMaterialNames(FabricLanguageProvider.TranslationBuilder translationBuilder) {
+        String mobArmorSpawnRate = CONFIG_PREFIX + "mobArmorSpawnRate";
+
+        translationBuilder.add(TOOLS_CONFIG_PREFIX, "Tool Stats");
+        translationBuilder.add(mobArmorSpawnRate, "Mob Armor Spawn Rate");
+        translationBuilder.add(mobArmorSpawnRate + ".general", "Spawn Chance");
+
         for (String material : MATERIAL_LIST) {
             String suffix = material + "MaterialStats";
-            translationBuilder.add(PREFIX + suffix, convertStringToSpacedProper(suffix));
+            translationBuilder.add(TOOLS_CONFIG_PREFIX + "." + suffix, convertStringToSpacedProper(suffix));
             for (Map.Entry<String, String> entry : COMMON_CONFIG_FIELDS.entrySet()) {
-                String mapping = PREFIX + suffix + "." + entry.getKey();
+                String mapping = TOOLS_CONFIG_PREFIX + "." + suffix + "." + entry.getKey();
+                translationBuilder.add(mapping, entry.getValue());
+            }
+
+            String armorCategory = mobArmorSpawnRate + "." + material;
+            translationBuilder.add(armorCategory, convertStringToSpacedProper(material));
+            for (Map.Entry<String, String> entry : ARMOR_CONFIG_FIELDS.entrySet()) {
+                String mapping = mobArmorSpawnRate + "." + material + "." + entry.getKey();
                 translationBuilder.add(mapping, entry.getValue());
             }
         }
