@@ -1,0 +1,53 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#mekanismtools:tools/paxels/wood",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/paxels/stone",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/paxels/iron",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/paxels/gold",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/paxels/diamond",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/paxels/netherite",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/paxels/bronze",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/paxels/lapis_lazuli",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/paxels/osmium",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/paxels/refined_glowstone",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/paxels/refined_obsidian",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/paxels/steel",
+      "required": false
+    }
+  ]
+}

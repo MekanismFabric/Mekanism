@@ -6,6 +6,21 @@
         "items": [
           {
             "items": [
+              "mekanismtools:steel_shield"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_obsidian_shield"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:osmium_shield"
+            ]
+          },
+          {
+            "items": [
               "mekanismtools:lapis_lazuli_shield"
             ]
           },
@@ -17,21 +32,6 @@
           {
             "items": [
               "mekanismtools:refined_glowstone_shield"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:osmium_shield"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:refined_obsidian_shield"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:steel_shield"
             ]
           }
         ]

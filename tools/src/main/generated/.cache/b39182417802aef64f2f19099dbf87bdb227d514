@@ -1,7 +1,7 @@
-// 1.20.1	2023-07-22T19:21:25.3233626	Mekanism: Tools/Advancements
+// 1.20.1	2023-07-23T00:07:46.4560255	Mekanism: Tools/Advancements
 0057c07e017c71182650546e025d6d1fa53df716 data\mekanismtools\advancements\loved_by_piglins.json
-1a96e3a1fcf093a5a9a8ee8c7d020645036c4dd8 data\mekanismtools\advancements\alternate_tools.json
-f46b9a3d83c0196e2cedfbc901dc463c1007fba4 data\mekanismtools\advancements\paxel.json
-49611e4ef937c040d076311d1f8c0e2d480ac6a9 data\mekanismtools\advancements\alternate_armor.json
-f0a3c8e047fe42c5d278c81d80856d6ab1bfa54e data\mekanismtools\advancements\not_enough_shielding.json
+d68924da5f4fe6ad948bca08d90171b5e0c4b8fa data\mekanismtools\advancements\paxel.json
+4a7bd76c0e9b666c1aacfe249984582222155084 data\mekanismtools\advancements\alternate_tools.json
+310f7f581c8af8e4f22007817125cdad13dfbda2 data\mekanismtools\advancements\alternate_armor.json
+b8b9af271f09c56c35257f922986b391acca55fb data\mekanismtools\advancements\not_enough_shielding.json
 bbd1fbedc18dd0f5c55556131bde2f9cbe7a1fcc data\mekanismtools\advancements\better_than_netherite.json

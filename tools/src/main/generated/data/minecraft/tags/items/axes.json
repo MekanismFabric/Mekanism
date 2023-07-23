@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#mekanismtools:tools/axes/bronze",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/axes/lapis_lazuli",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/axes/osmium",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/axes/refined_glowstone",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/axes/refined_obsidian",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/axes/steel",
+      "required": false
+    }
+  ]
+}

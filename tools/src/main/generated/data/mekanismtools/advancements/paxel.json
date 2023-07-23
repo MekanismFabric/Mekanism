@@ -6,42 +6,12 @@
         "items": [
           {
             "items": [
-              "mekanismtools:lapis_lazuli_paxel"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:netherite_paxel"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:iron_paxel"
-            ]
-          },
-          {
-            "items": [
               "mekanismtools:gold_paxel"
             ]
           },
           {
             "items": [
-              "mekanismtools:bronze_paxel"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:wood_paxel"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:osmium_paxel"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:diamond_paxel"
+              "mekanismtools:lapis_lazuli_paxel"
             ]
           },
           {
@@ -51,7 +21,7 @@
           },
           {
             "items": [
-              "mekanismtools:refined_obsidian_paxel"
+              "mekanismtools:stone_paxel"
             ]
           },
           {
@@ -61,7 +31,37 @@
           },
           {
             "items": [
-              "mekanismtools:stone_paxel"
+              "mekanismtools:refined_obsidian_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:osmium_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:bronze_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:diamond_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:netherite_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:wood_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:iron_paxel"
             ]
           }
         ]

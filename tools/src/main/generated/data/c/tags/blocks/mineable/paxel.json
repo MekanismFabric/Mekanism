@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:mineable/axe",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mineable/pickaxe",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mineable/shovel",
+      "required": false
+    }
+  ]
+}

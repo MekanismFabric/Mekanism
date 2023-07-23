@@ -6,7 +6,37 @@
         "items": [
           {
             "items": [
-              "mekanismtools:refined_obsidian_shovel"
+              "mekanismtools:refined_glowstone_shovel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_glowstone_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:osmium_shovel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:lapis_lazuli_sword"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:lapis_lazuli_axe"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:steel_hoe"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_obsidian_axe"
             ]
           },
           {
@@ -16,7 +46,32 @@
           },
           {
             "items": [
-              "mekanismtools:bronze_hoe"
+              "mekanismtools:steel_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_obsidian_shovel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:lapis_lazuli_hoe"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:osmium_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:lapis_lazuli_shovel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:bronze_shovel"
             ]
           },
           {
@@ -26,12 +81,7 @@
           },
           {
             "items": [
-              "mekanismtools:refined_glowstone_hoe"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:steel_pickaxe"
+              "mekanismtools:refined_glowstone_axe"
             ]
           },
           {
@@ -46,17 +96,7 @@
           },
           {
             "items": [
-              "mekanismtools:refined_glowstone_pickaxe"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:osmium_hoe"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:refined_glowstone_shovel"
+              "mekanismtools:steel_sword"
             ]
           },
           {
@@ -66,27 +106,7 @@
           },
           {
             "items": [
-              "mekanismtools:osmium_sword"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:osmium_pickaxe"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:osmium_shovel"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:refined_obsidian_axe"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:refined_glowstone_axe"
+              "mekanismtools:bronze_axe"
             ]
           },
           {
@@ -96,7 +116,7 @@
           },
           {
             "items": [
-              "mekanismtools:refined_obsidian_pickaxe"
+              "mekanismtools:bronze_pickaxe"
             ]
           },
           {
@@ -106,22 +126,22 @@
           },
           {
             "items": [
-              "mekanismtools:bronze_shovel"
+              "mekanismtools:refined_obsidian_pickaxe"
             ]
           },
           {
             "items": [
-              "mekanismtools:bronze_axe"
+              "mekanismtools:bronze_hoe"
             ]
           },
           {
             "items": [
-              "mekanismtools:bronze_pickaxe"
+              "mekanismtools:refined_glowstone_hoe"
             ]
           },
           {
             "items": [
-              "mekanismtools:lapis_lazuli_axe"
+              "mekanismtools:osmium_hoe"
             ]
           },
           {
@@ -131,27 +151,7 @@
           },
           {
             "items": [
-              "mekanismtools:lapis_lazuli_shovel"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:lapis_lazuli_hoe"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:steel_hoe"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:steel_sword"
-            ]
-          },
-          {
-            "items": [
-              "mekanismtools:lapis_lazuli_sword"
+              "mekanismtools:osmium_sword"
             ]
           }
         ]

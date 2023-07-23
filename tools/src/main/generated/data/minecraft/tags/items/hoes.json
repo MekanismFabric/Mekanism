@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#mekanismtools:tools/hoes/bronze",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/hoes/lapis_lazuli",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/hoes/osmium",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/hoes/refined_glowstone",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/hoes/refined_obsidian",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/hoes/steel",
+      "required": false
+    }
+  ]
+}
