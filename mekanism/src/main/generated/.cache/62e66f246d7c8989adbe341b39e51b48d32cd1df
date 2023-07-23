@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-15T10:59:27.2991709	Mekanism/Recipes
+// 1.20.1	2023-07-22T19:03:00.9635796	Mekanism/Recipes
 525e043a0a534161b01590fc2a6d9dbcef509164 data\mekanism\recipes\ingot_tin_from_smelting_dust_tin.json
 d88759908d39c6b7ae6fa0ba237526a0ebc5e933 data\mekanism\advancements\recipes\misc\fluorite_gem_from_blasting_fluorite_ore.json
 b8aa573eddf9fb98a257409f414e783217b598ec data\mekanism\recipes\block_to_ingot\raw_tin.json
@@ -149,8 +149,8 @@ f9485350154aa4319423c475a874176d4ee1ee7e data\mekanism\advancements\recipes\misc
 563e8d9fedc2c933f5fe6104fe0780d541e225bd data\mekanism\advancements\recipes\misc\ingot_uranium_from_blasting_deepslate_uranium_ore.json
 562ce6806d930fe517585688a4d013ce9fae05ff data\mekanism\recipes\block_to_ingot\ingot_refined_glowstone.json
 75cfd41d5c33e42535189cb3fe7ac13b5439f523 data\mekanism\advancements\recipes\misc\netherite_ingot_from_blasting_dust_netherite.json
-97a0e9639a8c83f1944f2014964d455dbe2088b8 data\mekanism\recipes\ingot_to_block\block_steel.json
 a53cd95ee59bab7308039f4aa945800554216dc6 data\mekanism\recipes\ingot_to_nugget\nugget_uranium.json
+97a0e9639a8c83f1944f2014964d455dbe2088b8 data\mekanism\recipes\ingot_to_block\block_steel.json
 21957477db7dec68eb0d86b8a5e5c762840f361c data\mekanism\recipes\gold_ingot_from_smelting_dust_gold.json
 4acb74f7e8dda2e7d951354c96e4004e7b82c2f3 data\mekanism\advancements\recipes\building_blocks\ingot_to_block\block_refined_glowstone.json
 40aee83ffcaa27050413116e9fd70dd7cb5508aa data\mekanism\advancements\recipes\misc\netherite_ingot_from_smelting_dust_netherite.json

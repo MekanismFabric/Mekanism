@@ -1,5 +1,8 @@
 package mekanism;
 
+import mekanism.advancements.MekanismAdvancement;
+import mekanism.advancements.MekanismAdvancements;
+import mekanism.advancements.MekanismCriterion;
 import mekanism.registries.MekanismBlocks;
 import mekanism.registries.MekanismItems;
 import mekanism.resource.PrimaryResources;
@@ -7,17 +10,27 @@ import mekanism.resource.ResourceTypes;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.advancement.Advancement;
+import net.minecraft.advancement.AdvancementFrame;
+import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.predicate.entity.LootContextPredicate;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.text.Text;
 
 import java.util.List;
 import java.util.function.Consumer;
+
+import static mekanism.Mekanism.id;
 
 public class MekanismDataGenerator implements DataGeneratorEntrypoint {
     @Override
@@ -25,6 +38,8 @@ public class MekanismDataGenerator implements DataGeneratorEntrypoint {
         final FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(MekanismRecipeGenerator::new);
+        pack.addProvider(MekanismAdvancementGenerator::new);
+//        pack.addProvider(MekanismLangGenerator::new);
     }
 
     private static class MekanismRecipeGenerator extends FabricRecipeProvider {
@@ -201,6 +216,70 @@ public class MekanismDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(FabricRecipeProvider.hasItem(MekanismBlocks.SALT_BLOCK),
                             FabricRecipeProvider.conditionsFromItem(MekanismBlocks.SALT_BLOCK))
                     .offerTo(exporter);
+        }
+    }
+
+    private static class MekanismAdvancementGenerator extends FabricAdvancementProvider {
+
+        protected MekanismAdvancementGenerator(FabricDataOutput output) {
+            super(output);
+        }
+
+        @Override
+        public void generateAdvancement(Consumer<Advancement> consumer) {
+            Advancement root = Advancement.Builder.create()
+                .display(
+                    MekanismItems.EMERALD_DUST,
+                    Text.translatable(MekanismAdvancements.ROOT.title()),
+                    Text.translatable(MekanismAdvancements.ROOT.description()),
+                    id("textures/block/block_osmium.png"),
+                    AdvancementFrame.GOAL,
+                    false,
+                    false,
+                    false
+                )
+                .criterion("automatic", new TickCriterion.Conditions(MekanismCriterion.LOGGED_IN.getId(), LootContextPredicate.EMPTY))
+                .build(id("root"));
+            consumer.accept(root);
+
+            Advancement materials = Advancement.Builder.create()
+                .parent(root)
+                .display(
+                    MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.OSMIUM),
+                    Text.translatable(MekanismAdvancements.MATERIALS.title()),
+                    Text.translatable(MekanismAdvancements.MATERIALS.description()),
+                    null,
+                    AdvancementFrame.TASK,
+                    true,
+                    false,
+                    false
+                )
+                .criterion("material", InventoryChangedCriterion.Conditions.items(
+                    MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.OSMIUM),
+                    MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.TIN),
+                    MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.LEAD),
+                    MekanismItems.PROCESSED_RESOURCES.get(ResourceTypes.INGOT, PrimaryResources.URANIUM)
+                ))
+                .build(id("materials"));
+            consumer.accept(materials);
+        }
+    }
+
+    private static class MekanismLangGenerator extends FabricLanguageProvider {
+
+        private MekanismLangGenerator(FabricDataOutput dataGenerator) {
+            super(dataGenerator, "en_us");
+        }
+
+        @Override
+        public void generateTranslations(TranslationBuilder translationBuilder) {
+            addAdvancement(translationBuilder, MekanismAdvancements.ROOT, "Mekanism", "Welcome to Mekanism!");
+            addAdvancement(translationBuilder, MekanismAdvancements.MATERIALS, "First Steps", "Acquire some natural Mekanism resources");
+        }
+
+        private void addAdvancement(TranslationBuilder translationBuilder, MekanismAdvancement advancement, String title, String description) {
+            translationBuilder.add(advancement.title(), title);
+            translationBuilder.add(advancement.description(), description);
         }
     }
 }

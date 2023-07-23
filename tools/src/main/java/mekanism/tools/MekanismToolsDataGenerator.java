@@ -1,29 +1,38 @@
 package mekanism.tools;
 
+import mekanism.advancements.MekanismAdvancement;
 import mekanism.registries.MekanismItems;
 import mekanism.resource.PrimaryResources;
 import mekanism.resource.ResourceTypes;
+import mekanism.tools.advancements.ToolsAdvancements;
 import mekanism.tools.datagen.BaseItemModelProvider;
 import mekanism.tools.datagen.ConfigLangHelper;
-import mekanism.tools.item.ItemMekanismPaxel;
-import mekanism.tools.item.ItemMekanismShield;
+import mekanism.tools.item.*;
 import mekanism.tools.registries.ToolsItems;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.advancement.Advancement;
+import net.minecraft.advancement.AdvancementFrame;
+import net.minecraft.advancement.criterion.CriterionConditions;
+import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.apache.commons.lang3.text.WordUtils;
 
 import java.util.Map;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 import static mekanism.tools.MekanismTools.id;
 import static mekanism.tools.datagen.ToolsRecipeHelper.registerRecipeSet;
@@ -38,6 +47,7 @@ public class MekanismToolsDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(MekanismToolsItemGenerator::new);
         pack.addProvider(MekanismToolsLangGenerator::new);
         pack.addProvider(MekanismToolsRecipeGenerator::new);
+        pack.addProvider(MekanismToolsAdvancementProvider::new);
     }
 
     private static class MekanismToolsItemGenerator extends BaseItemModelProvider {
@@ -112,6 +122,17 @@ public class MekanismToolsDataGenerator implements DataGeneratorEntrypoint {
             ConfigLangHelper.addMaterialNames(translationBuilder);
 
             translationBuilder.add("tooltip.mekanismtools.hp", "HP: %1$s");
+            addAdvancement(translationBuilder, ToolsAdvancements.PAXEL, "Multi-tool", "Craft any Paxel (Pickaxe, Axe, Shovel)");
+            addAdvancement(translationBuilder, ToolsAdvancements.ALTERNATE_ARMOR, "More Armor Types!", "Craft any piece of Armor from Mekanism Tools");
+            addAdvancement(translationBuilder, ToolsAdvancements.ALTERNATE_TOOLS, "More Tool Types!", "Craft any tool or weapon (except Paxels) from Mekanism Tools");
+            addAdvancement(translationBuilder, ToolsAdvancements.NOT_ENOUGH_SHIELDING, "Not Enough Shielding", "Craft any Shield added by Mekanism Tools");
+            addAdvancement(translationBuilder, ToolsAdvancements.BETTER_THAN_NETHERITE, "Better Than Netherite", "Protect yourself with a piece of Refined Obsidian Armor");
+            addAdvancement(translationBuilder, ToolsAdvancements.LOVED_BY_PIGLINS, "Loved By Piglins", "Refined Glowstone Armor glows even brighter than gold!");
+        }
+
+        private void addAdvancement(TranslationBuilder translationBuilder, MekanismAdvancement advancement, String title, String description) {
+            translationBuilder.add(advancement.title(), title);
+            translationBuilder.add(advancement.description(), description);
         }
 
         private String convertItemKeyToDisplay(String itemKey) {
@@ -165,6 +186,66 @@ public class MekanismToolsDataGenerator implements DataGeneratorEntrypoint {
                     ToolsItems.STEEL_SHIELD, MekanismItems.STEEL_INGOT, Items.IRON_INGOT, MekanismItems.STEEL_NUGGET);
 
             registerVanillaPaxels(exporter);
+        }
+    }
+
+    private static class MekanismToolsAdvancementProvider extends FabricAdvancementProvider {
+
+        protected MekanismToolsAdvancementProvider(FabricDataOutput output) {
+            super(output);
+        }
+
+        @Override
+        public void generateAdvancement(Consumer<Advancement> consumer) {
+            createAdvancement(consumer, ToolsAdvancements.PAXEL, ToolsItems.DIAMOND_PAXEL, AdvancementFrame.TASK, "any_paxel", InventoryChangedCriterion.Conditions.items(
+                    getItems(item -> item instanceof ItemMekanismPaxel)
+            ));
+            createAdvancement(consumer, ToolsAdvancements.ALTERNATE_ARMOR, ToolsItems.OSMIUM_CHESTPLATE, AdvancementFrame.TASK, "armor", InventoryChangedCriterion.Conditions.items(
+                    getItems(item -> item instanceof ItemMekanismArmor)
+            ));
+            createAdvancement(consumer, ToolsAdvancements.ALTERNATE_TOOLS, ToolsItems.OSMIUM_PICKAXE, AdvancementFrame.TASK, "tools", InventoryChangedCriterion.Conditions.items(
+                    getItems(item -> item instanceof ItemMekanismAxe || item instanceof ItemMekanismHoe || item instanceof ItemMekanismPickaxe || item instanceof ItemMekanismShovel || item instanceof ItemMekanismSword)
+            ));
+            createAdvancement(consumer, ToolsAdvancements.NOT_ENOUGH_SHIELDING, ToolsItems.OSMIUM_SHIELD, AdvancementFrame.TASK, "shields", InventoryChangedCriterion.Conditions.items(
+                    getShields(item -> item instanceof ItemMekanismShield)
+            ));
+            createAdvancement(consumer, ToolsAdvancements.BETTER_THAN_NETHERITE, ToolsItems.REFINED_OBSIDIAN_CHESTPLATE, AdvancementFrame.GOAL, "armor", InventoryChangedCriterion.Conditions.items(
+                    ToolsItems.REFINED_OBSIDIAN_HELMET, ToolsItems.REFINED_OBSIDIAN_CHESTPLATE, ToolsItems.REFINED_OBSIDIAN_LEGGINGS, ToolsItems.REFINED_OBSIDIAN_BOOTS));
+            createAdvancement(consumer, ToolsAdvancements.LOVED_BY_PIGLINS, ToolsItems.REFINED_GLOWSTONE_CHESTPLATE, AdvancementFrame.GOAL, "armor", InventoryChangedCriterion.Conditions.items(
+                    ToolsItems.REFINED_GLOWSTONE_HELMET, ToolsItems.REFINED_GLOWSTONE_CHESTPLATE, ToolsItems.REFINED_GLOWSTONE_LEGGINGS, ToolsItems.REFINED_GLOWSTONE_BOOTS
+            ));
+        }
+
+        private Advancement createAdvancement(Consumer<Advancement> consumer, MekanismAdvancement advancement, Item displayItem, AdvancementFrame frame, String criteriaName, CriterionConditions conditions) {
+            Advancement created = Advancement.Builder
+                    .create()
+                    .parent(advancement.parentAsAdvancement())
+                    .criterion(criteriaName, conditions)
+                    .display(
+                            displayItem,
+                            Text.translatable(advancement.title()),
+                            Text.translatable(advancement.description()),
+                            null,
+                            frame,
+                            true,
+                            true,
+                            false
+                    )
+                    .build(advancement.name());
+            consumer.accept(created);
+            return created;
+        }
+
+        private ItemConvertible[] getItems(Predicate<Item> matcher) {
+            return ToolsItems.ALL_ITEMS.keySet().stream()
+                    .filter(matcher)
+                    .toArray(ItemConvertible[]::new);
+        }
+
+        private ItemConvertible[] getShields(Predicate<Item> matcher) {
+            return ToolsItems.ALL_SHIELDS.keySet().stream()
+                    .filter(matcher)
+                    .toArray(ItemConvertible[]::new);
         }
     }
 }

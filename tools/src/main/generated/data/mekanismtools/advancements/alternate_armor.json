@@ -1,0 +1,154 @@
+{
+  "parent": "mekanism:materials",
+  "criteria": {
+    "armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mekanismtools:lapis_lazuli_helmet"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:steel_boots"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:osmium_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_obsidian_leggings"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:steel_leggings"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_obsidian_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:bronze_helmet"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:bronze_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:bronze_boots"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_glowstone_helmet"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:osmium_boots"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_glowstone_leggings"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:steel_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_glowstone_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:bronze_leggings"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:lapis_lazuli_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:steel_helmet"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_obsidian_boots"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:lapis_lazuli_boots"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:lapis_lazuli_leggings"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:osmium_helmet"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_obsidian_helmet"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_glowstone_boots"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:osmium_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mekanismtools.alternate_armor.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mekanismtools:osmium_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mekanismtools.alternate_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
