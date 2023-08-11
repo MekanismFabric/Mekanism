@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "lapis_lazuli/armor/",
+  "key": {
+    "b": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "pattern": [
+    "b b",
+    "bbb",
+    "bbb"
+  ],
+  "result": {
+    "item": "mekanismtools:lapis_lazuli_chestplate"
+  },
+  "show_notification": true
+}

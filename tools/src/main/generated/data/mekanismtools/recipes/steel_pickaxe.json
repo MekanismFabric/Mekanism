@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel/tools/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_steel"
+    },
+    "s": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "bbb",
+    " s ",
+    " s "
+  ],
+  "result": {
+    "item": "mekanismtools:steel_pickaxe"
+  },
+  "show_notification": true
+}

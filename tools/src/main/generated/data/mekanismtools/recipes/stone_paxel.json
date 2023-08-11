@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "vanilla/tools/",
+  "key": {
+    "a": {
+      "item": "minecraft:stone_axe"
+    },
+    "p": {
+      "item": "minecraft:stone_pickaxe"
+    },
+    "r": {
+      "item": "minecraft:stick"
+    },
+    "s": {
+      "item": "minecraft:stone_shovel"
+    }
+  },
+  "pattern": [
+    "aps",
+    " r ",
+    " r "
+  ],
+  "result": {
+    "item": "mekanismtools:stone_paxel"
+  },
+  "show_notification": true
+}

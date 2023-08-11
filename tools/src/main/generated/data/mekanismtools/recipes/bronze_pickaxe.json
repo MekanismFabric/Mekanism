@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "bronze/tools/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_bronze"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "bbb",
+    " s ",
+    " s "
+  ],
+  "result": {
+    "item": "mekanismtools:bronze_pickaxe"
+  },
+  "show_notification": true
+}

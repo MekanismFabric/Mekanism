@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_steel_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mekanismtools:steel_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_steel_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mekanismtools:steel_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_steel_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mekanismtools:steel_shovel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mekanismtools:steel_paxel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_axe",
+      "has_steel_pickaxe",
+      "has_steel_shovel",
+      "has_iron_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mekanismtools:steel_paxel"
+    ]
+  },
+  "sends_telemetry_event": false
+}

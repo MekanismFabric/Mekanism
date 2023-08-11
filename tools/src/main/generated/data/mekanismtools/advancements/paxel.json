@@ -1,0 +1,94 @@
+{
+  "parent": "mekanism:root",
+  "criteria": {
+    "any_paxel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mekanismtools:gold_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:lapis_lazuli_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_glowstone_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:stone_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:steel_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:refined_obsidian_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:osmium_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:bronze_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:diamond_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:netherite_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:wood_paxel"
+            ]
+          },
+          {
+            "items": [
+              "mekanismtools:iron_paxel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mekanismtools.paxel.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mekanismtools:diamond_paxel",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mekanismtools.paxel.title"
+    }
+  },
+  "requirements": [
+    [
+      "any_paxel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

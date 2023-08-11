@@ -1,4 +1,9 @@
 {
+  "advancements.mekanism.root.title": "Mekanism",
+  "advancements.mekanism.root.description": "Welcome to Mekanism!",
+  "advancements.mekanism.materials.title": "First Steps",
+  "advancements.mekanism.materials.description": "Acquire some natural Mekanism resources",
+
   "block.mekanism.osmium_ore": "Osmium Ore",
   "block.mekanism.deepslate_osmium_ore": "Osmium Deepslate Ore",
   "block.mekanism.lead_ore": "Lead Ore",

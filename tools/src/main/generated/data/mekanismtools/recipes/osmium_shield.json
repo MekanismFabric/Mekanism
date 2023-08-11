@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "osmium/armor/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_osmium"
+    },
+    "s": {
+      "item": "minecraft:shield"
+    }
+  },
+  "pattern": [
+    "bsb",
+    "bbb",
+    " b "
+  ],
+  "result": {
+    "item": "mekanismtools:osmium_shield"
+  },
+  "show_notification": true
+}

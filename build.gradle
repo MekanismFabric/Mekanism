@@ -63,22 +63,20 @@ allprojects {
 		mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 		modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
+		compileOnly 'org.projectlombok:lombok:1.18.28'
+		annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
 		// Fabric API. This is technically optional, but you probably want it anyway.
 		modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 		modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}") {
 			exclude(module: "fabric-api")
 		}
-		modRuntimeOnly("com.terraformersmc:modmenu:${project.mod_menu_version}") {
-			transitive(false)
+		modApi("com.terraformersmc:modmenu:${project.mod_menu_version}") {
+			exclude(group: "net.fabricmc.fabric-api")
 		}
 
-		modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${project.wthit_version}"
-		modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${project.wthit_version}"
-
-		modCompileOnly "me.shedaniel:RoughlyEnoughItems-api:${project.rei_version}"
-
-		implementation 'com.electronwill.night-config:toml:3.6.0'
+		implementation 'com.electronwill.night-config:toml:3.6.6'
 	}
 
 	configurations { dev }

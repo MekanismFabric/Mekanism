@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "bronze/armor/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_bronze"
+    }
+  },
+  "pattern": [
+    "b b",
+    "b b"
+  ],
+  "result": {
+    "item": "mekanismtools:bronze_boots"
+  },
+  "show_notification": true
+}

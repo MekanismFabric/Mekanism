@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "bronze/armor/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_bronze"
+    }
+  },
+  "pattern": [
+    "b b",
+    "bbb",
+    "bbb"
+  ],
+  "result": {
+    "item": "mekanismtools:bronze_chestplate"
+  },
+  "show_notification": true
+}

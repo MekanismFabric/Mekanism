@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "osmium/armor/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_osmium"
+    }
+  },
+  "pattern": [
+    "b b",
+    "b b"
+  ],
+  "result": {
+    "item": "mekanismtools:osmium_boots"
+  },
+  "show_notification": true
+}

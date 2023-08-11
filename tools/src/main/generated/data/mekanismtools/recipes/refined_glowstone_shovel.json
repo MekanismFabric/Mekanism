@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "refined_glowstone/tools/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_refined_glowstone"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "b",
+    "s",
+    "s"
+  ],
+  "result": {
+    "item": "mekanismtools:refined_glowstone_shovel"
+  },
+  "show_notification": true
+}

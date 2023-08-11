@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel/armor/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_steel"
+    }
+  },
+  "pattern": [
+    "b b",
+    "bbb",
+    "bbb"
+  ],
+  "result": {
+    "item": "mekanismtools:steel_chestplate"
+  },
+  "show_notification": true
+}

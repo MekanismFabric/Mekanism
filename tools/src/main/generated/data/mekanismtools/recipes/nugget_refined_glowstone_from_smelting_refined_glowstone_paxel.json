@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "refined_glowstone/nugget_from_smelting",
+  "ingredient": {
+    "item": "mekanismtools:refined_glowstone_paxel"
+  },
+  "result": "mekanism:nugget_refined_glowstone"
+}

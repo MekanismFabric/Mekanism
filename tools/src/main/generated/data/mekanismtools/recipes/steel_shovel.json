@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel/tools/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_steel"
+    },
+    "s": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "b",
+    "s",
+    "s"
+  ],
+  "result": {
+    "item": "mekanismtools:steel_shovel"
+  },
+  "show_notification": true
+}

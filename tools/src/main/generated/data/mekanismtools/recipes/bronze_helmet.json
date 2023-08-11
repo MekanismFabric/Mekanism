@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "bronze/armor/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_bronze"
+    }
+  },
+  "pattern": [
+    "bbb",
+    "b b"
+  ],
+  "result": {
+    "item": "mekanismtools:bronze_helmet"
+  },
+  "show_notification": true
+}

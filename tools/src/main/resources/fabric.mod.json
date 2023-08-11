@@ -24,10 +24,19 @@
     ],
     "client": [
       "mekanism.tools.MekanismToolsClient"
+    ],
+    "fabric-datagen": [
+      "mekanism.tools.MekanismToolsDataGenerator"
+    ],
+    "modmenu": [
+      "mekanism.tools.MekanismToolsModMenu"
     ]
   },
 
-  "mixins": [],
+  "mixins": [
+    "mekanismtools.accessors.json",
+    "mekanismtools.mixins.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.14.21",

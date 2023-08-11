@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "bronze/tools/",
+  "key": {
+    "a": {
+      "item": "mekanismtools:bronze_axe"
+    },
+    "p": {
+      "item": "mekanismtools:bronze_pickaxe"
+    },
+    "r": {
+      "item": "minecraft:stick"
+    },
+    "s": {
+      "item": "mekanismtools:bronze_shovel"
+    }
+  },
+  "pattern": [
+    "aps",
+    " r ",
+    " r "
+  ],
+  "result": {
+    "item": "mekanismtools:bronze_paxel"
+  },
+  "show_notification": true
+}

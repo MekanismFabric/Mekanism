@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steel_paxel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mekanismtools:steel_paxel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:nugget_steel_from_blasting_steel_paxel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_steel_paxel",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:nugget_steel_from_blasting_steel_paxel"
+    ]
+  },
+  "sends_telemetry_event": false
+}

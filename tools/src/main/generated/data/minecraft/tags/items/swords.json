@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#mekanismtools:tools/swords/bronze",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/swords/lapis_lazuli",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/swords/osmium",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/swords/refined_glowstone",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/swords/refined_obsidian",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/swords/steel",
+      "required": false
+    }
+  ]
+}

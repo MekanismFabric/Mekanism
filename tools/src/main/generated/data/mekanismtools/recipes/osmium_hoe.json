@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "osmium/tools/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_osmium"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "bb",
+    " s",
+    " s"
+  ],
+  "result": {
+    "item": "mekanismtools:osmium_hoe"
+  },
+  "show_notification": true
+}

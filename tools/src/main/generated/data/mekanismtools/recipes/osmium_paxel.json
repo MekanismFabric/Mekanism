@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "osmium/tools/",
+  "key": {
+    "a": {
+      "item": "mekanismtools:osmium_axe"
+    },
+    "p": {
+      "item": "mekanismtools:osmium_pickaxe"
+    },
+    "r": {
+      "item": "minecraft:stick"
+    },
+    "s": {
+      "item": "mekanismtools:osmium_shovel"
+    }
+  },
+  "pattern": [
+    "aps",
+    " r ",
+    " r "
+  ],
+  "result": {
+    "item": "mekanismtools:osmium_paxel"
+  },
+  "show_notification": true
+}

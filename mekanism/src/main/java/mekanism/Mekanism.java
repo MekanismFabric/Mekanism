@@ -1,5 +1,6 @@
 package mekanism;
 
+import mekanism.advancements.MekanismCriterion;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import mekanism.registries.MekanismBlocks;
@@ -20,6 +21,7 @@ public class Mekanism implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Loading {}", MODID);
+		MekanismCriterion.init();
 		MekanismItems.registerItems();
 		MekanismBlocks.registerBlocks();
 		MekanismItemGroups.registerItemGroups();

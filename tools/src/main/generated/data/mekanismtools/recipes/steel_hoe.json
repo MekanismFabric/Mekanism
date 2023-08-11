@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "steel/tools/",
+  "key": {
+    "b": {
+      "item": "mekanism:ingot_steel"
+    },
+    "s": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "bb",
+    " s",
+    " s"
+  ],
+  "result": {
+    "item": "mekanismtools:steel_hoe"
+  },
+  "show_notification": true
+}

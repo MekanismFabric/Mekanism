@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#mekanismtools:tools/shovels/bronze",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/shovels/lapis_lazuli",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/shovels/osmium",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/shovels/refined_glowstone",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/shovels/refined_obsidian",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/shovels/steel",
+      "required": false
+    }
+  ]
+}

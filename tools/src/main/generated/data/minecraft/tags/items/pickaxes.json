@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#mekanismtools:tools/pickaxes/bronze",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/pickaxes/lapis_lazuli",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/pickaxes/osmium",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/pickaxes/refined_glowstone",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/pickaxes/refined_obsidian",
+      "required": false
+    },
+    {
+      "id": "#mekanismtools:tools/pickaxes/steel",
+      "required": false
+    }
+  ]
+}

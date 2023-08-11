@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "vanilla/tools/",
+  "key": {
+    "a": {
+      "item": "minecraft:wooden_axe"
+    },
+    "p": {
+      "item": "minecraft:wooden_pickaxe"
+    },
+    "r": {
+      "item": "minecraft:stick"
+    },
+    "s": {
+      "item": "minecraft:wooden_shovel"
+    }
+  },
+  "pattern": [
+    "aps",
+    " r ",
+    " r "
+  ],
+  "result": {
+    "item": "mekanismtools:wood_paxel"
+  },
+  "show_notification": true
+}

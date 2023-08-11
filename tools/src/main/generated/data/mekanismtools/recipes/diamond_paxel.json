@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "vanilla/tools/",
+  "key": {
+    "a": {
+      "item": "minecraft:diamond_axe"
+    },
+    "p": {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    "r": {
+      "item": "minecraft:stick"
+    },
+    "s": {
+      "item": "minecraft:diamond_shovel"
+    }
+  },
+  "pattern": [
+    "aps",
+    " r ",
+    " r "
+  ],
+  "result": {
+    "item": "mekanismtools:diamond_paxel"
+  },
+  "show_notification": true
+}
