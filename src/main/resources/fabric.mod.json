@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "mekanismfabric",
+	"version": "${version}",
+	"name": "MekanismFabric",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mekanismfabric/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"panda.mekanismfabric.MekanismFabric"
+		],
+		"fabric-datagen": [
+			"panda.mekanismfabric.MekanismFabricDataGenerator"
+		]
+	},
+	"mixins": [
+		"mekanismfabric.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.18.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
